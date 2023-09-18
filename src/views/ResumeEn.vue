@@ -17,7 +17,7 @@ export default {
 
 <template>
   <Wall>
-      <a href="/Pierre LEMÉE - Software engineer.pdf" title="PDF version" class="pdf-link block red3">pdf</a>
+      <a href="/pdfs/Pierre LEMÉE - Software engineer.pdf" title="PDF version" class="pdf-link block red3">pdf</a>
       <a href="/fr" title="Lire en Français" class="locale-link block blue2">fr</a>
   </Wall>
   <div id="content">

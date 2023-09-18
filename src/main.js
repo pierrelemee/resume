@@ -1,3 +1,7 @@
+import '@/assets/desktop.scss';
+import '@/assets/mobile.scss';
+import '@/assets/print.scss';
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 

@@ -8,10 +8,12 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: './',
-    build: {
-        outDir: 'dist',
-    },
-    publicDir: 'public',
+  build: {
+    outDir: 'dist',
+    minify: true,
+    cssMinify: true,
+  },
+  publicDir: 'public',
   plugins: [
     vue(),
     vueJsx(),
