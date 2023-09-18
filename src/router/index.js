@@ -7,16 +7,24 @@ const router = createRouter({
       path: '/',
       name: 'home',
       redirect: () => {
-        return { path: '/fr' }
+        const browserLocale = (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en';
+
+        if (browserLocale === 'fr') {
+          return { path: '/fr' }
+        }
+
+        return { path: '/en' }
       },
     },
     {
       path: '/fr',
-      name: 'french',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      name: 'resume-french',
+      component: () => import('../views/ResumeFr.vue')
+    },
+    {
+      path: '/en',
+      name: 'resume-english',
+      component: () => import('../views/ResumeEn.vue')
     }
   ]
 })

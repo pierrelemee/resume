@@ -19,7 +19,9 @@ export default {
     window.removeEventListener("resize", this.resize);
   } ,
   methods: {
-    resize: () => console.log("Resized!")
+    resize() {
+      this.wall?.resize();
+    }
   }
 }
 </script>
@@ -37,10 +39,12 @@ export default {
         :style="{
           left: `${wall.startx + (block.x * 37)}px`,
           bottom: `${wall.starty + (block.y * 44)}px`,
-          'z-index': 10 * block.y,
+          'z-index': 2 * block.y,
         }"
     ></div>
   </template>
+
+  <slot></slot>
 </div>
 </template>
 

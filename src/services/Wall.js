@@ -2,9 +2,8 @@ import { Row } from '@/services/Row';
 
 export class Wall {
 
-    constructor (target, links = {}) {
+    constructor (target) {
         this.target = target;
-        this.links = links;
         this.rows = [];
         this.initialize();
     }
@@ -12,20 +11,16 @@ export class Wall {
     initialize () {
         this.rows = [];
 
-        this.width = Math.floor(this.target.clientWidth / 44) + 1;
+        this.width = Math.ceil(this.target.clientWidth / 37) + 1;
         // TODO: adapt depending on device "profile"
-        this.height = Math.floor(this.target.clientHeight / 37 + 1);
-        this.startx = Math.floor(this.target.clientWidth - (this.width * 44));
+        this.height = Math.floor(this.target.clientHeight / 44) - 2;
+        this.startx = this.target.clientWidth - (37 * this.width);
         this.starty = 0;
         //
 
         for (let i = 0; i < this.height; i++) {
-            this.rows.push(new Row(this.width + (i === 0 && this.isMobile() ? 2 : 0), i));
+            this.rows.push(new Row(this.width, i));
         }
-    }
-
-    isMobile () {
-        return window.clientWidth <= 768;
     }
 
     resize() {

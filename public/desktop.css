@@ -22,6 +22,14 @@ body h1,h2,h3,h4,h5 {
 	position:absolute;height:52px;background-image:url('/images/blocks_white_yellow_red_blue_black_1-2-3-4-6.png');
 }
 
+a.locale-link {
+	right:0;bottom:44px;z-index: 2;
+}
+
+a.pdf-link {
+	right:0;bottom: 0;z-index: 0;
+}
+
 .white1{
 	width:37px;background-position:0px 0;
 }
