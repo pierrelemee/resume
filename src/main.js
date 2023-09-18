@@ -1,14 +1,20 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+import VueAnalytics from 'vue-analytics'
 import App from './App.vue'
-import router from './router'
+//import router from './router'
 
 const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
+if (import.meta.env.GOOGLE_ANALYTICS_ID) {
+    app.use(VueAnalytics, {
+      id: import.meta.env.GOOGLE_ANALYTICS_ID,
+      checkDuplicatedScript: true
+    });
+}
 
-app.mount('#app')
+app.use(createPinia())
+//app.use(router)
+
+app.mount(document.body)

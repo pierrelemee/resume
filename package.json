@@ -12,6 +12,7 @@
   "dependencies": {
     "pinia": "^2.1.6",
     "vue": "^3.3.4",
+    "vue-analytics": "^5.22.1",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
