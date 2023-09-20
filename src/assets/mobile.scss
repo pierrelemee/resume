@@ -1,8 +1,7 @@
-@import "_fonts.scss";
-@import "_blocks.scss";
+@import '_fonts.scss';
+@import '_blocks.scss';
 
 @media screen and (max-width: 768px) {
-
   html {
     height: 100%;
     overflow: hidden;
@@ -15,7 +14,8 @@
     position: relative;
   }
 
-  html, body {
+  html,
+  body {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -23,13 +23,17 @@
   }
 
   body {
-    background: url("/images/pattern.png");
+    background: url('/images/pattern.png');
     color: #111;
     font: 1.1em 'Trebuchet MS';
     text-align: left;
   }
 
-  body h1, h2, h3, h4, h5 {
+  body h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: 'BigNoodleTitling', sans-serif;
   }
 
@@ -46,7 +50,6 @@
   #blocks div.block {
     display: none;
   }
-
 
   a.locale-link {
     left: 0;
@@ -188,7 +191,6 @@
   .lastfm {
     background-image: url('/images/lastfm.png');
   }
-
 
   #skills-inner {
     position: relative;

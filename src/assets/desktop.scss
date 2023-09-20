@@ -1,310 +1,313 @@
-@import "_fonts.scss";
-@import "_blocks.scss";
+@import '_fonts.scss';
+@import '_blocks.scss';
 
 @media screen and (min-width: 769px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
 
-    html, body {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
+  body {
+    background: url('/images/pattern.png');
+    color: #111;
+    font:
+      1em 'Roboto',
+      'Helvetica Neue';
+    text-align: left;
+    overflow: visible;
+  }
+
+  body h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'BigNoodleTitling', sans-serif;
+  }
+
+  #blocks {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+
+    a {
+      display: inline-block;
+      border: 0;
+      text-decoration: none;
+      font: 26px 'BigNoodleTitling';
+      color: #eee;
+      text-align: center;
+      line-height: 60px;
     }
+  }
 
-    body {
-        background: url("/images/pattern.png");
-        color: #111;
-        font: 1.1em 'Trebuchet MS';
-        text-align: left;
-        overflow: visible;
-    }
+  a.locale-link {
+    right: 0;
+    bottom: 44px;
+    z-index: 2;
+  }
 
-    body h1, h2, h3, h4, h5 {
-        font-family: 'BigNoodleTitling', sans-serif;
-    }
+  a.pdf-link {
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
 
-    #blocks {
-        position: fixed;
-        width: 200px;
-        height: 100%;
-        overflow: hidden;
+  #content {
+    position: relative;
+    height: calc(100% - 100px);
+    left: 200px;
+    width: calc(100% - 600px);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    overflow: scroll;
+  }
 
-        a {
-            display: inline-block;
-            border: 0;
-            text-decoration: none;
-            font: 26px 'BigNoodleTitling';
-            color: #eee;
-            text-align: center;
-            line-height: 60px;
-        }
-    }
+  #content h4 {
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    font-size: 28px;
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
 
+  #content h5 {
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+  }
 
-    a.locale-link {
-        right: 0;
-        bottom: 44px;
-        z-index: 2;
-    }
+  #content p {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+    text-align: justify;
+  }
 
-    a.pdf-link {
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-    }
+  #content ul {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 0 0 0 30px;
+    list-style-position: outside;
+  }
 
-    #content {
-        position: relative;
-        height: calc(100% - 100px);
-        left: 200px;
-        width: calc(100% - 600px);
-        display: flex;
-        flex-direction: column;
-        padding: 50px;
-        overflow: scroll;
-    }
+  #content a {
+    color: #074987;
+    text-decoration: none;
+  }
 
-    #content h4 {
-        display: inline-block;
-        width: 100%;
-        color: #333;
-        font-size: 28px;
-        margin: 0;
-        padding: 15px 0 0 0;
-    }
+  #content a:hover {
+    text-decoration: underline;
+  }
 
-    #content h5 {
-        display: inline-block;
-        width: 100%;
-        color: #333;
-        font-size: 22px;
-        margin: 0;
-        padding: 0;
-    }
+  .soft-title {
+    color: #555;
+  }
 
-    #content p {
-        display: inline-block;
-        width: 100%;
-        margin: 10px 0;
-        text-align: justify;
-    }
+  .section-title {
+    display: inline-block;
+    width: calc(100% - 50px);
+    padding: 0 2px 0 48px;
+    margin: 15px 0;
+    color: #333;
+    font-size: 30px;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
 
-    #content ul {
-        display: inline-block;
-        margin: 10px 0;
-        padding: 0 0 0 30px;
-        list-style-position: outside;
-    }
+  #header {
+    margin: 0;
+  }
 
-    #content a {
-        color: #074987;
-        text-decoration: none;
-    }
+  #header * {
+    margin: 0;
+  }
 
-    #content a:hover {
-        text-decoration: underline;
-    }
+  #name {
+    border-bottom: #333 solid 8px;
+  }
 
-    .soft-title {
-        color: #555;
-    }
+  #name h1 {
+    color: #333;
+    font-size: 45px;
+    font-weight: bold;
+  }
 
-    .section-title {
-        display: inline-block;
-        width: calc(100% - 50px);
-        padding: 0 2px 0 48px;
-        margin: 15px 0;
-        color: #333;
-        font-size: 30px;
-        background-repeat: no-repeat;
-        background-position: left center;
-    }
+  #job {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+  }
 
-    #header {
-        margin: 0;
-    }
+  #job h3 {
+    color: #333;
+    font-size: 28px;
+  }
 
-    #header * {
-        margin: 0;
-    }
+  #social {
+    text-align: right;
+  }
 
-    #name {
-        border-bottom: #333 solid 8px;
-    }
+  #social a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    line-height: 40px;
+    color: #333;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
 
-    #name h1 {
-        color: #333;
-        font-size: 45px;
-        font-weight: bold;
-    }
+  #social a:hover {
+    color: #555;
+    background-position-y: bottom;
+  }
 
-    #job {
-        display: inline-block;
-        height: 40px;
-        line-height: 40px;
-    }
+  .github {
+    background-image: url('/images/github.png');
+  }
 
+  .twitter {
+    background-image: url('/images/twitter.png');
+  }
 
-    #job h3 {
-        color: #333;
-        font-size: 28px;
-    }
+  .lastfm {
+    background-image: url('/images/lastfm.png');
+  }
 
-    #social {
-        text-align: right;
-    }
+  #skills-inner {
+    display: none;
+  }
 
-    #social a {
-        display: inline-block;
-        height: 40px;
-        width: 40px;
-        text-decoration: none;
-        line-height: 40px;
-        color: #333;
-        background-position: top center;
-        background-repeat: no-repeat;
-    }
+  #skills-outter {
+    position: fixed;
+    height: calc(100% - 100px);
+    right: 0;
+    top: 0;
+    width: 280px;
+    margin: 0;
+    padding: 40px 9px 40px 10px;
+    border-left: 1px solid #999;
+    color: #333;
+    font-size: 0.9em;
+    text-align: justify;
+    overflow: scroll;
+    z-index: 10;
+  }
 
-    #social a:hover {
-        color: #555;
-        background-position-y: bottom;
-    }
+  .skills-title {
+    background-image: url('/images/block2black.png');
+  }
 
-    .github {
-        background-image: url('/images/github.png');
-    }
+  .skills-category {
+    width: 90%;
+    padding: 5% 2%;
+    min-height: 10px;
+    overflow: hidden;
+  }
 
-    .twitter {
-        background-image: url('/images/twitter.png');
-    }
+  .skills-category h4 {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 24px;
+  }
 
-    .lastfm {
-        background-image: url('/images/lastfm.png');
-    }
+  .skills-category ul {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0;
+    margin: 0;
+    list-style: outside none;
+  }
 
-    #skills-inner {
-        display: none;
-    }
+  .skills-category li {
+    display: inline-block;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+  }
 
-    #skills-outter {
-        position: fixed;
-        height: calc(100% - 100px);
-        right: 0;
-        top: 0;
-        width: 280px;
-        margin: 0;
-        padding: 40px 9px 40px 10px;
-        border-left: 1px solid #999;
-        color: #333;
-        font-size: 0.9em;
-        text-align: justify;
-        overflow: scroll;
-        z-index: 10;
-    }
+  .level {
+    display: inline-block;
+    height: 8px;
+    border-top: 1px #666 solid;
+  }
 
-    .skills-title {
-        background-image: url('/images/block2black.png');
-    }
+  .level-yellow {
+    background-color: #f2a60c;
+  }
 
-    .skills-category {
-        width: 90%;
-        padding: 5% 2%;
-        min-height: 10px;
-        overflow: hidden;
-    }
+  .level-red {
+    background-color: #c71414;
+  }
 
-    .skills-category h4 {
-        display: inline-block;
-        width: 100%;
-        padding: 10px 0;
-        margin: 0;
-        font-size: 24px;
-    }
+  .level-blue {
+    background-color: #074987;
+  }
 
-    .skills-category ul {
-        display: inline-block;
-        width: 100%;
-        padding: 5px 0;
-        margin: 0;
-        list-style: outside none;
-    }
+  .level-white {
+    background-color: #fffcfc;
+  }
 
-    .skills-category li {
-        display: inline-block;
-        width: 100%;
-        height: 15px;
-        line-height: 15px;
-    }
+  .level-black {
+    background-color: #0a0a0a;
+  }
 
-    .level {
-        display: inline-block;
-        height: 8px;
-        border-top: 1px #666 solid;
-    }
+  .level-5 {
+    width: 120px;
+    margin: 5px 10px 0 calc(50% - 120px);
+  }
 
-    .level-yellow {
-        background-color: #f2a60c;
-    }
+  .level-4 {
+    width: 96px;
+    margin: 5px 10px 0 calc(50% - 96px);
+  }
 
-    .level-red {
-        background-color: #c71414;
-    }
+  .level-3 {
+    width: 72px;
+    margin: 5px 10px 0 calc(50% - 72px);
+  }
 
-    .level-blue {
-        background-color: #074987;
-    }
+  .level-2 {
+    width: 48px;
+    margin: 5px 10px 0 calc(50% - 48px);
+  }
 
-    .level-white {
-        background-color: #fffcfc;
-    }
+  .level-1 {
+    width: 24px;
+    margin: 5px 10px 0 calc(50% - 24px);
+  }
 
-    .level-black {
-        background-color: #0a0a0a;
-    }
+  .intro-title {
+    background-image: url('/images/block2blue.png');
+  }
 
-    .level-5 {
-        width: 120px;
-        margin: 5px 10px 0 calc(50% - 120px);
-    }
+  .jobs-title {
+    background-image: url('/images/block2yellow.png');
+  }
 
-    .level-4 {
-        width: 96px;
-        margin: 5px 10px 0 calc(50% - 96px);
-    }
+  .education-title {
+    background-image: url('/images/block2red.png');
+  }
 
-    .level-3 {
-        width: 72px;
-        margin: 5px 10px 0 calc(50% - 72px);
-    }
+  #misc {
+    padding-bottom: 50px;
+  }
 
-    .level-2 {
-        width: 48px;
-        margin: 5px 10px 0 calc(50% - 48px);
-    }
-
-    .level-1 {
-        width: 24px;
-        margin: 5px 10px 0 calc(50% - 24px);
-    }
-
-    .intro-title {
-        background-image: url('/images/block2blue.png');
-    }
-
-    .jobs-title {
-        background-image: url('/images/block2yellow.png');
-    }
-
-    .education-title {
-        background-image: url('/images/block2red.png');
-    }
-
-    #misc {
-        padding-bottom: 50px;
-    }
-
-    .misc-title {
-        background-image: url('/images/block2blue.png');
-    }
-
+  .misc-title {
+    background-image: url('/images/block2blue.png');
+  }
 }
