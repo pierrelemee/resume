@@ -5,35 +5,74 @@
   html,
   body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
   }
 
   body {
     background: url('/images/pattern.png');
+    display: flex;
+    flex-direction: row;
     color: #111;
     font:
       1em 'Roboto',
       'Helvetica Neue';
     text-align: left;
     overflow: visible;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'BigNoodleTitling', sans-serif;
+    }
   }
 
-  body h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: 'BigNoodleTitling', sans-serif;
-  }
+  .wall {
+    &.wall-left {
+      width: calc(0.7 * (100% - 1100px));
+    }
+    &.wall-right {
+      width: calc(0.3 * (100% - 1100px));
+    }
 
-  #blocks {
-    position: fixed;
-    width: 200px;
-    height: 100%;
+    position: relative;
+    height: 100vh;
     overflow: hidden;
+
+    .blocks {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+
+      a {
+        display: inline-block;
+        border: 0;
+        text-decoration: none;
+        font: 26px 'BigNoodleTitling';
+        color: #eee;
+        text-align: center;
+        line-height: 60px;
+      }
+    }
+  }
+
+  aside {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: fixed;
+    width: 1100px;
+    height: 50px;
+    bottom: 0;
+    padding: 0 50px;
+    left: calc(0.7 * (100% - 1100px));
+
+    .block {
+      position: initial;
+    }
 
     a {
       display: inline-block;
@@ -46,68 +85,65 @@
     }
   }
 
-  a.locale-link {
-    right: 0;
-    bottom: 44px;
-    z-index: 2;
-  }
-
-  a.pdf-link {
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-  }
-
-  #content {
+  .page-outer {
     position: relative;
-    height: calc(100% - 100px);
-    left: 200px;
-    width: calc(100% - 600px);
+    width: 1100px;
+    height: calc(100vh - 75px);
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    overflow: scroll;
-  }
+    margin-bottom: 75px;
+    overflow-y: hidden;
 
-  #content h4 {
-    display: inline-block;
-    width: 100%;
-    color: #333;
-    font-size: 28px;
-    margin: 0;
-    padding: 15px 0 0 0;
-  }
+    header,
+    #content {
+      width: calc(100% - 100px);
+      padding: 20px 50px;
+    }
 
-  #content h5 {
-    display: inline-block;
-    width: 100%;
-    color: #333;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
-  }
+    .page-inner {
+      overflow-y: scroll;
+    }
 
-  #content p {
-    display: inline-block;
-    width: 100%;
-    margin: 10px 0;
-    text-align: justify;
-  }
+    h4 {
+      display: inline-block;
+      width: 100%;
+      color: #333;
+      font-size: 28px;
+      margin: 0;
+      padding: 15px 0 0 0;
+    }
 
-  #content ul {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 0 0 0 30px;
-    list-style-position: outside;
-  }
+    h5 {
+      display: inline-block;
+      width: 100%;
+      color: #333;
+      font-size: 22px;
+      margin: 0;
+      padding: 0;
+    }
 
-  #content a {
-    color: #074987;
-    text-decoration: none;
-  }
+    p {
+      display: inline-block;
+      width: 100%;
+      margin: 10px 0;
+      text-align: justify;
+    }
 
-  #content a:hover {
-    text-decoration: underline;
+    ul {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 0 0 0 30px;
+      list-style-position: outside;
+    }
+
+    a {
+      color: #074987;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .soft-title {
@@ -125,33 +161,48 @@
     background-position: left center;
   }
 
-  #header {
+  header {
     margin: 0;
-  }
 
-  #header * {
-    margin: 0;
+    * {
+      margin: 0;
+    }
   }
 
   #name {
     border-bottom: #333 solid 8px;
-  }
 
-  #name h1 {
-    color: #333;
-    font-size: 45px;
-    font-weight: bold;
+    h1 {
+      color: #333;
+      font-size: 45px;
+      font-weight: bold;
+    }
   }
 
   #job {
     display: inline-block;
     height: 40px;
     line-height: 40px;
+
+    h3 {
+      color: #333;
+      font-size: 28px;
+    }
   }
 
-  #job h3 {
-    color: #333;
-    font-size: 28px;
+  #skills {
+    ul.skill-badges {
+      list-style-position: inside;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        padding: 5px 2px;
+        margin: auto 5px;
+        border-radius: 3px;
+        background-color: rgba(#eee, 0.8);
+      }
+    }
   }
 
   #social {
@@ -187,10 +238,10 @@
   }
 
   #skills-inner {
-    display: none;
   }
 
   #skills-outter {
+    display: none;
     position: fixed;
     height: calc(100% - 100px);
     right: 0;
