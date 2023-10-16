@@ -33,6 +33,7 @@ const __dirname = path.dirname(__filename);
   await page.goto('http://localhost:5173/fr', {
     waitUntil: 'networkidle0',
   });
+  await page.emulateMediaType('print');
 
   await page.pdf({
     path: path.join(__dirname, '../public/pdfs/Pierre LEMÉE - Ingénieur logiciel.pdf'),

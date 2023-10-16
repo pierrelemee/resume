@@ -40,7 +40,7 @@ export default {
         </div>
         <div class="job">
           <h2>
-            Homme // <span class="soft-title">{{ age }}</span> //
+            Homme // <span class="soft-title">{{ age }} ans</span> //
             <span class="soft-title">Français</span>
           </h2>
         </div>
@@ -109,18 +109,18 @@ export default {
             <span class="skill-badge skill-white skill-master">MySQL</span>
             <span class="skill-badge skill-white skill-secure">PostgreSQL</span>
             <span class="skill-badge skill-blue skill-secure">Vue</span>
+            <span class="skill-badge skill-black skill-master">Bash</span>
+            <span class="skill-badge skill-black skill-secure">Git</span>
             <span class="skill-badge skill-blue skill-secure">Bootstrap</span>
             <span class="skill-badge skill-blue skill-padawan">React</span>
             <span class="skill-badge skill-blue skill-comfy">Tailwind</span>
             <span class="skill-badge skill-red skill-comfy">Java</span>
             <span class="skill-badge skill-yellow skill-padawan">Spring Boot</span>
-            <span class="skill-badge skill-black skill-master">Bash</span>
-            <span class="skill-badge skill-black skill-secure">Git</span>
             <span class="skill-badge skill-black skill-comfy">Ansible</span>
             <span class="skill-badge skill-black skill-secure">CI (Circle / Github Actions)</span>
             <span class="skill-badge skill-black skill-comfy">AWS</span>
             <span class="skill-badge skill-white skill-secure">Metabase</span>
-            <span class="skill-badge skill-black skill-securer">Rabbit MQ</span>
+            <span class="skill-badge skill-black skill-secure">Rabbit MQ</span>
             <span class="skill-badge skill-black skill-comfy">Redis</span>
             <span class="skill-badge skill-black skill-padawan">Elasticsearch (ELK)</span>
             <span class="skill-badge skill-white skill-padawan">Hadoop</span>
