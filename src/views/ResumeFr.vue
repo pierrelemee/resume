@@ -36,7 +36,7 @@ export default {
     <div class="page-inner">
       <header>
         <div class="name">
-          <h1>Pierre LEMÉE // <span class="soft-title">CTO & Ingénieur logiciel</span></h1>
+          <h1>Pierre LEMÉE // <span class="soft-title">Ingénieur logiciel</span></h1>
         </div>
         <div class="job">
           <h2>
@@ -131,11 +131,11 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h3>
+              <h4>
                 <a href="https://beta.gouv.fr/">Beta.gouv</a> &
                 <a href="https://underdog.shop/">Underdog</a>
-              </h3>
-              <h4>Développeur // 2022 - 2023</h4>
+              </h4>
+              <h5>Développeur // 2022 - 2023</h5>
             </div>
 
             <div class="job-description">
@@ -147,10 +147,10 @@ export default {
             </div>
           </div>
 
-          <div class="job job-reversed">
+          <div class="job">
             <div class="job-summary">
-              <h3><a href="https://ignition-program.com/">Ignition Program</a></h3>
-              <h4>CTO // 2020 - 2022</h4>
+              <h4><a href="https://ignition-program.com/">Ignition Program</a></h4>
+              <h5>CTO // 2020 - 2022</h5>
             </div>
 
             <div class="job-description">
@@ -167,8 +167,8 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h3><a href="https://www.bloom-at-work.com/">Bloom at Work (Lucca)</a></h3>
-              <h4>CTO // 2018 - 2020</h4>
+              <h4><a href="https://www.bloom-at-work.com/">Bloom at Work (Lucca)</a></h4>
+              <h5>CTO // 2018 - 2020</h5>
             </div>
 
             <div class="job-description">
@@ -186,8 +186,8 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h3><a href="https://billogram.com/en">Billogram (🇸🇪)</a></h3>
-              <h4>Développeur / devops // 2017</h4>
+              <h4><a href="https://billogram.com/en">Billogram (🇸🇪)</a></h4>
+              <h5>Développeur / devops // 2017</h5>
             </div>
 
             <div class="job-description">
@@ -201,8 +201,8 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h3><a href="https://www.senscritique.com">Senscritique</a></h3>
-              <h4>CTO // 2016</h4>
+              <h4><a href="https://www.senscritique.com">Senscritique</a></h4>
+              <h5>CTO // 2016</h5>
             </div>
 
             <div class="job-description">
@@ -216,8 +216,8 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h3><a href="https://www.blablacar.fr">Blablacar</a></h3>
-              <h4>Développeur // 2014- 2016</h4>
+              <h4><a href="https://www.blablacar.fr">Blablacar</a></h4>
+              <h5>Développeur // 2014- 2016</h5>
             </div>
 
             <div class="job-description">
@@ -231,8 +231,8 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h3><a href="https://www.blablacar.fr">Altran (Capgemini)</a></h3>
-              <h4>Développeur // 2013- 2014</h4>
+              <h4><a href="https://www.blablacar.fr">Altran (Capgemini)</a></h4>
+              <h5>Développeur // 2013- 2014</h5>
             </div>
 
             <div class="job-description">
@@ -246,8 +246,8 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h3><a href="https://www.blablacar.fr">Thalès Alenia Space</a></h3>
-              <h4>Développeur // 2011- 2013</h4>
+              <h4><a href="https://www.blablacar.fr">Thalès Alenia Space</a></h4>
+              <h5>Développeur // 2011- 2013</h5>
             </div>
 
             <div class="job-description">
