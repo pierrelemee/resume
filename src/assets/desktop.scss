@@ -1,6 +1,266 @@
 @import '_fonts.scss';
 @import '_blocks.scss';
 
+/** Variables */
+
+/** End variables */
+
+/** Headers */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'BigNoodleTitling', sans-serif;
+  color: #333;
+  font-weight: bold;
+
+  &.light {
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0.2rem 0;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin: 0.2rem 0;
+}
+
+h3 {
+  height: 2rem;
+  font-size: 1.8rem;
+  margin: 0.2rem 0;
+
+  &.title-yellow {
+    &:before {
+      display: inline-block;
+      content: '';
+      width: 37px;
+      height: 100%;
+      margin-right: 1rem;
+      background: url('@/assets/block2yellow.png') bottom center no-repeat;
+    }
+  }
+
+  &.title-red {
+    &:before {
+      display: inline-block;
+      content: '';
+      width: 37px;
+      height: 100%;
+      margin-right: 1rem;
+      background: url('@/assets/block2red.png') bottom center no-repeat;
+    }
+  }
+
+  &.title-blue {
+    &:before {
+      display: inline-block;
+      content: '';
+      width: 37px;
+      height: 100%;
+      margin-right: 1rem;
+      background: url('@/assets/block2blue.png') bottom center no-repeat;
+    }
+  }
+
+  &.title-black {
+    &:before {
+      display: inline-block;
+      content: '';
+      width: 37px;
+      height: 100%;
+      margin-right: 1rem;
+      background: url('@/assets/block2black.png') bottom center no-repeat;
+    }
+  }
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+  color: #666;
+}
+
+/** End headers */
+
+/** Flex */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/** End flex */
+
+/** Skills */
+.skill-badges {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-flow: wrap;
+  gap: 5px;
+
+  &.skill-badges-mini {
+    margin-top: 10px;
+
+    span.skill-badge {
+      padding: 3px 7px;
+      margin: auto 0;
+      border-radius: 10px;
+      background-color: rgba(#ddd, 1);
+      font-size: 0.8rem;
+
+      &:before {
+        height: 7px;
+      }
+
+      &.skill-padawan:before {
+        width: 5px;
+      }
+
+      &.skill-comfy:before {
+        width: 25px;
+      }
+
+      &.skill-secure:before {
+        width: 45px;
+      }
+
+      &.skill-master:before {
+        width: 65px;
+      }
+    }
+  }
+
+  &.skill-badges-right {
+    justify-content: flex-end;
+  }
+
+  span.skill-badge {
+    padding: 5px 10px;
+    margin: auto 5px;
+    border-radius: 15px;
+    background-color: rgba(#ddd, 1);
+    font-size: 1rem;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 10px;
+      vertical-align: bottom;
+      margin: 5px 5px 5px 0;
+      border-radius: 5px;
+    }
+
+    &.skill-blue:before {
+      background-color: #074987;
+    }
+
+    &.skill-yellow:before {
+      background-color: #f2a60c;
+    }
+
+    &.skill-red:before {
+      background-color: #c71414;
+    }
+
+    &.skill-white:before {
+      background-color: #fffcfc;
+    }
+
+    &.skill-black:before {
+      background-color: #0a0a0a;
+    }
+
+    &.skill-padawan:before {
+      width: 15px;
+    }
+
+    &.skill-comfy:before {
+      width: 40px;
+    }
+
+    &.skill-secure:before {
+      width: 65px;
+    }
+
+    &.skill-master:before {
+      width: 90px;
+    }
+
+    &:hover {
+      /* TODO re-enable as soon as techno filter is on
+      background-color: rgba(#ccc, 1);
+      */
+    }
+  }
+}
+
+/** End skills */
+
+/** Jobs */
+.job {
+  @extend .flex-row;
+  margin-bottom: 1rem;
+
+  &.job-reversed {
+    .job-summary {
+      text-align: left;
+      order: 2;
+    }
+
+    .job-description {
+      order: 1;
+      border-right: 1px solid #666;
+      border-left: 0;
+
+      .skill-badges {
+        @extend .skill-badges-right;
+      }
+
+      p {
+        text-align: right;
+      }
+    }
+  }
+
+  &:not(.job-reversed) {
+    align-items: flex-end;
+  }
+
+  .job-description {
+    @extend .flex-column;
+    width: calc(75% - 50px);
+    border-left: 1px solid #666;
+    border-right: 0;
+    padding: 10px 25px;
+
+    p {
+      text-align: left;
+    }
+  }
+
+  .job-summary {
+    width: calc(25% - 40px);
+    padding: 20px;
+    text-align: right;
+  }
+}
+
+/** End jobs */
+
+section {
+  margin: 1.5rem 0;
+}
+
 @media screen and (min-width: 769px) {
   html,
   body {
@@ -11,7 +271,7 @@
   }
 
   body {
-    background: url('/images/pattern.png');
+    background: url('@/assets/pattern.png');
     display: flex;
     flex-direction: row;
     color: #111;
@@ -20,20 +280,13 @@
       'Helvetica Neue';
     text-align: left;
     overflow: visible;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: 'BigNoodleTitling', sans-serif;
-    }
   }
 
   .wall {
     &.wall-left {
       width: calc(0.7 * (100% - 1100px));
     }
+
     &.wall-right {
       width: calc(0.3 * (100% - 1100px));
     }
@@ -97,29 +350,68 @@
     header,
     #content {
       width: calc(100% - 100px);
-      padding: 20px 50px;
+    }
+
+    header {
+      padding: 25px 50px 0 50px;
+      margin: 0;
+
+      * {
+        margin: 0;
+      }
+
+      .social {
+        text-align: right;
+        align-items: flex-start;
+
+        a {
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          margin: 0 2px;
+          text-decoration: none;
+          line-height: 40px;
+          color: #333;
+          background-position: top center;
+          background-repeat: no-repeat;
+
+          &:hover {
+            color: #555;
+            background-position-y: bottom;
+          }
+
+          &.padded {
+            svg {
+              width: 30px;
+              height: 30px;
+              padding: 5px 2px 5px 3px;
+            }
+          }
+
+          svg {
+            width: 36px;
+            height: 36px;
+            padding: 2px;
+            fill: #666;
+
+            &:hover {
+              fill: #333;
+            }
+          }
+        }
+      }
+
+      .name {
+        border-bottom: #333 solid 8px;
+      }
+    }
+
+    #content {
+      padding: 0 50px;
     }
 
     .page-inner {
       overflow-y: scroll;
-    }
-
-    h4 {
-      display: inline-block;
-      width: 100%;
-      color: #333;
-      font-size: 28px;
-      margin: 0;
-      padding: 15px 0 0 0;
-    }
-
-    h5 {
-      display: inline-block;
-      width: 100%;
-      color: #333;
-      font-size: 22px;
-      margin: 0;
-      padding: 0;
     }
 
     p {
@@ -144,221 +436,5 @@
         text-decoration: underline;
       }
     }
-  }
-
-  .soft-title {
-    color: #555;
-  }
-
-  .section-title {
-    display: inline-block;
-    width: calc(100% - 50px);
-    padding: 0 2px 0 48px;
-    margin: 15px 0;
-    color: #333;
-    font-size: 30px;
-    background-repeat: no-repeat;
-    background-position: left center;
-  }
-
-  header {
-    margin: 0;
-
-    * {
-      margin: 0;
-    }
-  }
-
-  #name {
-    border-bottom: #333 solid 8px;
-
-    h1 {
-      color: #333;
-      font-size: 45px;
-      font-weight: bold;
-    }
-  }
-
-  #job {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-
-    h3 {
-      color: #333;
-      font-size: 28px;
-    }
-  }
-
-  #skills {
-    ul.skill-badges {
-      list-style-position: inside;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        padding: 5px 2px;
-        margin: auto 5px;
-        border-radius: 3px;
-        background-color: rgba(#eee, 0.8);
-      }
-    }
-  }
-
-  #social {
-    text-align: right;
-  }
-
-  #social a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    text-decoration: none;
-    line-height: 40px;
-    color: #333;
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
-
-  #social a:hover {
-    color: #555;
-    background-position-y: bottom;
-  }
-
-  .github {
-    background-image: url('/images/github.png');
-  }
-
-  .twitter {
-    background-image: url('/images/twitter.png');
-  }
-
-  .lastfm {
-    background-image: url('/images/lastfm.png');
-  }
-
-  #skills-inner {
-  }
-
-  #skills-outter {
-    display: none;
-    position: fixed;
-    height: calc(100% - 100px);
-    right: 0;
-    top: 0;
-    width: 280px;
-    margin: 0;
-    padding: 40px 9px 40px 10px;
-    border-left: 1px solid #999;
-    color: #333;
-    font-size: 0.9em;
-    text-align: justify;
-    overflow: scroll;
-    z-index: 10;
-  }
-
-  .skills-title {
-    background-image: url('/images/block2black.png');
-  }
-
-  .skills-category {
-    width: 90%;
-    padding: 5% 2%;
-    min-height: 10px;
-    overflow: hidden;
-  }
-
-  .skills-category h4 {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 0;
-    margin: 0;
-    font-size: 24px;
-  }
-
-  .skills-category ul {
-    display: inline-block;
-    width: 100%;
-    padding: 5px 0;
-    margin: 0;
-    list-style: outside none;
-  }
-
-  .skills-category li {
-    display: inline-block;
-    width: 100%;
-    height: 15px;
-    line-height: 15px;
-  }
-
-  .level {
-    display: inline-block;
-    height: 8px;
-    border-top: 1px #666 solid;
-  }
-
-  .level-yellow {
-    background-color: #f2a60c;
-  }
-
-  .level-red {
-    background-color: #c71414;
-  }
-
-  .level-blue {
-    background-color: #074987;
-  }
-
-  .level-white {
-    background-color: #fffcfc;
-  }
-
-  .level-black {
-    background-color: #0a0a0a;
-  }
-
-  .level-5 {
-    width: 120px;
-    margin: 5px 10px 0 calc(50% - 120px);
-  }
-
-  .level-4 {
-    width: 96px;
-    margin: 5px 10px 0 calc(50% - 96px);
-  }
-
-  .level-3 {
-    width: 72px;
-    margin: 5px 10px 0 calc(50% - 72px);
-  }
-
-  .level-2 {
-    width: 48px;
-    margin: 5px 10px 0 calc(50% - 48px);
-  }
-
-  .level-1 {
-    width: 24px;
-    margin: 5px 10px 0 calc(50% - 24px);
-  }
-
-  .intro-title {
-    background-image: url('/images/block2blue.png');
-  }
-
-  .jobs-title {
-    background-image: url('/images/block2yellow.png');
-  }
-
-  .education-title {
-    background-image: url('/images/block2red.png');
-  }
-
-  #misc {
-    padding-bottom: 50px;
-  }
-
-  .misc-title {
-    background-image: url('/images/block2blue.png');
   }
 }
