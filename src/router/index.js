@@ -24,7 +24,7 @@ const router = createRouter({
     {
       path: '/fr',
       name: 'resume-french',
-      component: () => ResumeView,
+      component: ResumeView,
       props: {
         locale: 'fr'
       }
@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/en',
       name: 'resume-english',
-      component: () => ResumeView,
+      component: ResumeView,
       props: {
         locale: 'en'
       }
