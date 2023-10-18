@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import ResumeView from '@/views/ResumeView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -22,12 +24,18 @@ const router = createRouter({
     {
       path: '/fr',
       name: 'resume-french',
-      component: () => import('../views/ResumeFr.vue')
+      component: () => ResumeView,
+      props: {
+        locale: 'fr'
+      }
     },
     {
       path: '/en',
       name: 'resume-english',
-      component: () => import('../views/ResumeEn.vue')
+      component: () => ResumeView,
+      props: {
+        locale: 'en'
+      }
     }
   ]
 })

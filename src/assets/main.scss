@@ -520,6 +520,8 @@ aside {
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
+    align-items: flex-start;
+
     &.job-reversed {
       .job-summary {
         text-align: left;
@@ -539,10 +541,6 @@ aside {
           text-align: right;
         }
       }
-    }
-
-    &:not(.job-reversed) {
-      align-items: flex-end;
     }
 
     .job-description {

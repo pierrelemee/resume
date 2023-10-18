@@ -1,0 +1,139 @@
+{
+  "header": {
+    "h1": {
+      "job-title": "Software engineer"
+    },
+    "h2": {
+      "gender": "Male",
+      "age": "{age} yo",
+      "nationality": "French"
+    },
+    "social": {
+      "linkedin": "See my LinkedIn profile",
+      "github": "See my Github profile",
+      "twitter": "To my X (Twitter)",
+      "lastfm": "Browse my musical record on Last.fm"
+    }
+  },
+  "aside": {
+    "pdf": {
+      "href": "/pdfs/Pierre LEMÉE - Software engineer.pdf",
+      "title": "PDF version",
+      "label": "pdf"
+    },
+    "translate": {
+      "href": "/fr",
+      "title": "Lire en Français",
+      "label": "fr"
+    }
+  },
+  "content": {
+    "sections": {
+      "intro": {
+        "title": "Intro",
+        "description": "<p>I build web apps the you play <a href=\"https://www.lego.com\" title=\"Lego\">Lego ©</a>, tech being an endless box with infinite pieces and possibilities without limit.</p><p>Code is my passion, I like the creativity required by this craftsmanship job. Even after 10+ years of work, I keep learning on a daily basis. Nevertheless, I keep following philosophies like <a hre=\"https://blog.octo.com/egoless-programming/\" title=\"Egoless programming\">egoless programming</a> or <a href=\"https://boringtechnology.club/\" title=\"Boring tech\">boring tech</a>.</p><p>I have a versatile profile, halfway between senior developer, devops or data engineer. I've been a CTO and a manager for several years, but today I aspire ot contribute by writing code. I would like to strengthen my knowledge of the NestJS framework, but I'm adaptable to many different tech stacks.</p>"
+      },
+      "tech": {
+        "title": "Tech",
+        "description": "Here are the technologies I'm confident with:",
+        "technos": {
+          "php": "PHP",
+          "symfony": "Symfony",
+          "python": "Python",
+          "django": "Django",
+          "flask": "Flask",
+          "js": "Javascript",
+          "ts": "Typescript",
+          "nest": "Nest",
+          "mysql": "MySQL",
+          "pg": "PostgreSQL",
+          "vue": "Vue",
+          "bash": "Bash",
+          "git": "Git",
+          "bootstrap": "Bootstrap",
+          "react": "React",
+          "tailwind": "Tailwind",
+          "java": "Java",
+          "spring": "Spring boot",
+          "ansible": "Ansible",
+          "ci": "CI (Circle / Github actions)",
+          "aws": "AWS",
+          "metabase": "Metabase",
+          "rabbit": "RabbitMQ",
+          "redis": "Redis",
+          "es": "Elasticsearch (ELK)",
+          "hadoop": "Hadoop"
+        }
+      },
+      "pro": {
+        "title": "Professional experience",
+        "jobs": {
+          "free": {
+            "company": "<a href=\"https://beta.gouv.fr/\">Beta.gouv</a> & <a href=\"https://underdog.shop/\">Underdog</a>",
+            "summary": "Developer // 2022 - 2023",
+            "description": "<p>Intervened as freelance developer for a French State startup <a hre=\"https://beta.gouv.fr/startups/apilos.html\">APiLos</a> in order to migrate data from the historical platform.</p> <p>I also created automation tools for the startup <strong>Underdog</strong>, via the NestJS framework.</p>"
+          },
+          "ignition": {
+            "company": "<a href=\"https://ignition-program.com/\">Ignition Program</a>",
+            "summary": "CTO // 2020 - 2022",
+            "description": "<p>I managed the tech team of<strong>Ignition Program</strong> which grew to 10 people under my command. After a year of rewriting the historical codebase, I worked on improving processes toward a much more performing product structure via setup of empowered squads.</p>"
+          },
+          "bloom": {
+            "company": "<a href=\"https://www.bloom-at-work.com/\">Bloom at Work (Lucca)</a>",
+            "summary": "CTO // 2018 - 2020",
+            "description": "<p>My first mission was to convert the MVP tool, first used for internal needs at <i>My Little Paris</i> to a fast, efficient and scalable B2B app for <strong>Bloom at Work</strong>.</p><p>I then staffed my development team and setup first processes aiming to satisfy user expectations and reach the startup goals and ambitions.</p>"
+          },
+          "billogram": {
+            "company": "<a href=\"https://billogram.com/en\">Billogram (\uD83C\uDDF8\uD83C\uDDEA)</a>",
+            "summary": "Developer / devops // 2017",
+            "description": "<p>In 2017, I lived in Sweden where I had the chance to join <strong>Billogram</strong> and its <i>platform team</i>.</p><p>I worked both on code and infrastructure sides.</p>"
+          },
+          "senscritique": {
+            "company": "<a href=\"https://www.senscritique.com\">Senscritique</a>",
+            "summary": "CTO // 2016",
+            "description": "<p>My first CTO role was at <strong>Sesncritique</strong></p><p>I setup right processes to allow tech team to lead long term projects, like mobile app creation, and treat recurring fastlane requests. I also had to make server infrastructure evolve (bare metal) to make the app scale with our users number.</p>"
+          },
+          "blablacar": {
+            "company": "<a href=\"https://www.blablacar.fr\">Blablacar</a>",
+            "summary": "Developer // 2014- 2016",
+            "description": "<p>I had the privilege to join the tech champion and carpooling leader: <strong>BlaBlaCar</strong>.</p><p>I first worked on developing new features on the web app, before forming a team dedicated to create a scaling big data platform for analytical needs.</p>"
+          },
+          "altran": {
+            "company": "Altran (Capgemini)",
+            "summary": "Developer // 2013- 2014",
+            "description": "<p>I was a consulting developer for Gemalto and a projet of contact less payment.</p><p>My responsibility was to write J2EE code as well as ensuring system integration.</p>"
+          },
+          "thales": {
+            "company": "<a href=\"https://www.thalesaleniaspace.com\">Thalès Alenia Space</a>",
+            "summary": "Developer // 2011- 2013",
+            "description": "<p>During my apprenticeship, I developed and maintained a Java based simulation environment for high resolution satellite images generation.</p>"
+          }
+        }
+      },
+      "misc": {
+        "title": "Divers",
+        "content": {
+          "languages": " Beside my maternal language, French obviously, I speak a fluent <strong>English</strong>, I could attend a conversation in Spanish and can identify words in <strong>Italian</strong>, <strong>German</strong> or <strong>Swedish</strong>.",
+          "hobbies": "On my spare time I like watching films et TV shows. Whenever I can I listen to music (mostly electronic, ambient, rock and jazz) on my vintage turn table. I play <strong>golf</strong> and I strive to run regularly.",
+          "likes": "I like to taste a good wine, beer or whisky, or play <i>mots fléchés</i> (french equivalent of crossword puzzles), I even made <a href=\"https://motsflech.es/\" title=\"Mots fléchés\">an app</a> for this.",
+          "life": "I currently live in Nantes after 10 years in Paris. I'm the proud daddy of a young girl."
+        }
+      },
+      "education": {
+        "title": "Schooling",
+        "schools": {
+          "afti": {
+            "diploma": "Software engineer",
+            "summary": "CFA AFTI (Orsay) // 2013",
+            "description": "<p>This cursus taught me technics of software engineering. Beyond simple coding base, I learned methods for leading IT projects.</p>"
+          },
+          "fac": {
+            "diploma": "Licence informatique",
+            "summary": "Université of Caen // 2009",
+            "description": "During this licence, I formed the baseline of my technical knowledge: code discovery, algorithms, web technologies, database & SQL, systems and networks"
+          }
+        }
+      }
+    }
+  }
+}
