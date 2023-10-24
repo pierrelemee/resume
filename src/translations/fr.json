@@ -31,7 +31,7 @@
     "sections": {
       "intro": {
         "title": "Intro",
-        "description": "<p>Je construis des applications web comme on joue aux <a href=\"https://www.lego.com\" title=\"Lego\">Lego ©</a>, la tech étant une boîte de jeux où les pièces sont infinies et les possibilités sans limite.</p><p>Le code est ma passion, j'aime la créativité requise par ce métier d'artisan. Même après plus de 10 ans à exercer, je continue d'apprendre au quotidien. Malgré tout, je reste convaincu par des philosophies comme l'<a hre=\"https://blog.octo.com/egoless-programming/\" title=\"Egoless programming\">egoless programming</a> ou la <a href=\"https://boringtechnology.club/\" title=\"Boring tech\">boring tech</a>.</p><p>J'ai un profil polyvalent, entre développeur fullstack senior, devops ou encore data engineer. J'ai officié plusieurs pendant plusieurs années comme CTO et manager, mais aujourd'hui je préfère contribuer en écrivant du code. J'aimerais approfondir ma connaissance du framework NestJS, mais je peux m'adapter à plein d'autres stack.</p>"
+        "description": "<p>Je construis des applications web comme on joue aux <a href=\"https://www.lego.com\" title=\"Lego\">Lego ©</a>, la tech étant une boîte de jeux où les pièces sont infinies et les possibilités sans limites.</p><p>Le code est ma passion, j'aime ce métier d'artisan et la créativité qu'il implique. Même après plus de 10 ans à exercer, je continue d'apprendre au quotidien. J'adhère tout de même à des philosophies comme l'<a hre=\"https://blog.octo.com/egoless-programming/\" title=\"Egoless programming\">egoless programming</a> ou la <a href=\"https://boringtechnology.club/\" title=\"Boring tech\">boring tech</a>.</p><p>J'ai un profil polyvalent, entre développeur fullstack senior, devops ou encore data engineer. J'ai endossé pendant plusieurs années le costume de CTO et manager, et même si aujourd'hui je préfère contribuer en écrivant du code, je peux tout à fait encadrer une équipe et mentorer. J'aimerais approfondir ma connaissance du framework NestJS, mais je peux m'adapter à plein d'autres stacks.</p>"
       },
       "tech": {
         "title": "Tech",
@@ -71,12 +71,12 @@
           "free": {
             "company": "<a href=\"https://beta.gouv.fr/\">Beta.gouv</a> & <a href=\"https://underdog.shop/\">Underdog</a>",
             "summary": "Développeur // 2022 - 2023",
-            "description": "<p>Intervenu en tant que freelance pour la startup d'état <a hre=\"https://beta.gouv.fr/startups/apilos.html\">APiLos</a> afin, notamment, de migrer les données depuis la plateforme historique.</p> <p>J'ai également créé des outils d'automatisation pour la startup <strong>Underdog</strong>, via le framework NestJS.</p>"
+            "description": "<p>Je suis intervenu en tant que freelance pour la startup d'état <a hre=\"https://beta.gouv.fr/startups/apilos.html\">APiLos</a> afin, notamment, de migrer les données depuis la plateforme historique.</p> <p>J'ai également créé des outils d'automatisation pour la startup <strong>Underdog</strong>, via le framework NestJS.</p>"
           },
           "ignition": {
             "company": "<a href=\"https://ignition-program.com/\">Ignition Program</a>",
             "summary": "CTO // 2020 - 2022",
-            "description": "<p>J'ai repris le management d'une équipe tech d'<strong>Ignition Program</strong> qui a grandi jusqu'à 10 personnes. Après une nécessité de refondre la base applicative historique, j'ai fait évolué les pratiques vers une approche produit performante via la mise en place de squads.</p>"
+            "description": "<p>J'ai repris le management de l'équipe tech d'<strong>Ignition Program</strong> que j'ai fait évoluer jusqu'à 10 personnes. Après une refonte applicative nécessaire, j'ai fait évolué les pratiques vers une approche produit performante via la mise en place de squads.</p>"
           },
           "bloom": {
             "company": "<a href=\"https://www.bloom-at-work.com/\">Bloom at Work (Lucca)</a>",
@@ -91,7 +91,7 @@
           "senscritique": {
             "company": "<a href=\"https://www.senscritique.com\">Senscritique</a>",
             "summary": "CTO // 2016",
-            "description": "<p>J'ai porté la casquette de CTO pour la première fois chez <strong>Sesncritique</strong></p><p>Outre mettre en place les bons processes pour permettre à l'équipe tech de mener à bien les projets de fond (ex: l'app mobile) tout traitant les demandes entrantes, j'ai eu à faire évoluer l'infrastructure serveur (bare metal) afin que cette app grand public réponde aux attentes de tous ses membres.</p>"
+            "description": "<p>J'ai porté la casquette de CTO pour la première fois chez <strong>Senscritique</strong></p><p>Outre mettre en place les bons processes pour permettre à l'équipe tech de mener à bien les projets de fond (ex: l'app mobile) tout traitant les demandes entrantes, j'ai eu à faire évoluer l'infrastructure serveur (bare metal) afin que cette app grand public réponde aux attentes de tous ses membres.</p>"
           },
           "blablacar": {
             "company": "<a href=\"https://www.blablacar.fr\">Blablacar</a>",
@@ -106,17 +106,17 @@
           "thales": {
             "company": "<a href=\"https://www.thalesaleniaspace.com\">Thalès Alenia Space</a>",
             "summary": "Développeur // 2011- 2013",
-            "description": "<p>Durant mon apprentissage, j'ai pris en main et fait évoluer j'ai développé et maintenu un environnement de simulation d'images satellites haute résolution.</p>"
+            "description": "<p>Durant mon apprentissage, j'ai pris en main et fait évoluer un environnement de simulation d'images satellites haute résolution.</p>"
           }
         }
       },
       "misc": {
         "title": "Divers",
         "content": {
-          "languages": "En plus de ma langue maternelle, je parle couramment <strong>anglais</strong>, peux\n            suivre une conversation en <strong>espagnol</strong> et suis capable d'identifier quelques mots en <strong>italien</strong>, <strong>allemand</strong> et <strong>suédois</strong>.",
+          "languages": "En plus de ma langue maternelle, je parle couramment <strong>anglais</strong>, peux suivre une conversation en <strong>espagnol</strong> et suis capable d'identifier quelques mots en <strong>italien</strong>, <strong>allemand</strong> et <strong>suédois</strong>.",
           "hobbies": "Sur mon temps libre j'aime regarder des films et des séries TV. Dès que je le peux j'écoute de la musique (principalement électro, trip-hop, rock ou jazz) depuis ma platine vinyle. Je joue au <strong>golf</strong> et m'efforce de courir régulièrement.",
-          "likes": "J'aime déguster a bon <strong>vin</strong>, une bonne <strong>bière</strong> ou un bon <strong>whisky</strong>. Je joue aux <strong>mots fléchés</strong> dès que je le peux, j'ai même crée <a href=\"https://motsflech.es/\" title=\"Mots fléchés\">une app</a> pour ça.",
-          "life": "Je vis actuellement à Nantes après avoir vécu 10 à Paris. Je suis le papa d'une petite fille dont je suis très fier."
+          "likes": "J'aime déguster a bon <strong>vin</strong>, une bonne <strong>bière</strong> ou un bon <strong>whisky</strong>. Je joue aux <strong>mots fléchés</strong> dès que je le peux, j'ai même créé <a href=\"https://motsflech.es/\" title=\"Mots fléchés\">une app</a> pour ça.",
+          "life": "Je vis actuellement à Nantes après avoir vécu 10 ans à Paris. Je suis le papa d'une petite fille dont je suis très fier."
         }
       },
       "education": {

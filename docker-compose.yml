@@ -1,0 +1,30 @@
+version: "3.9"
+
+name: "resume"
+services:
+  vue: &nest
+    hostname: vue
+    stdin_open: true
+    tty: true
+    build:
+      dockerfile: .docker/node.dockerfile
+    command: bash -c "yarn install && yarn dev --host"
+    #command: bash -c 'sleep 3600'
+    volumes:
+      - .:/app:rw
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "5173:5173"
+
+  nginx:
+    hostname: nginx
+    stdin_open: true
+    tty: true
+    build:
+      dockerfile: .docker/nginx.dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - "80:80"
+      - "443:443"

@@ -1,35 +1,19 @@
-# resume
+# La route du vin
 
-This template should help get you started developing with Vue 3 in Vite.
+## Preinstall
 
-## Recommended IDE Setup
+Before building Docker containers, generate locally-trusted certificates (via `mkcert`):
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```bash
+cd .docker/nginx/ssl
 
-## Customize configuration
+CAROOT=$(pwd) mkcert -install
+# Optional, if not stored on the system already
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain "$(pwd)/rootCA.pem"
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+# Create certificates for domain
+CAROOT=$(pwd) mkcert 'dev.pierrelemee.fr'
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+# Register domain as local domain
+echo '127.0.0.1 dev.pierrelemee.fr' | sudo tee -a /etc/hosts
 ```
