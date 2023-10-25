@@ -4,25 +4,24 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
 
-import VueAnalytics from 'vue-analytics'
+import VueGtag from "vue-gtag";
 
 import App from './App.vue'
 import router from './router'
 
 const app = createApp(App)
 
-if (import.meta.env.GOOGLE_ANALYTICS_ID) {
-  app.use(VueAnalytics, {
-    id: import.meta.env.GOOGLE_ANALYTICS_ID,
-    checkDuplicatedScript: true
-  })
-}
-
 // State
 app.use(createPinia())
 
 // Router
 app.use(router)
+
+if (import.meta.env.MODE === 'production') {
+  app.use(VueGtag, {
+    config: { id: 'G-BZ8NP8PVMB' }
+  }, router);
+}
 
 // i18n
 import { messages } from '@/translations/index.js'
