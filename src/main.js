@@ -2,12 +2,13 @@ import '@/assets/main.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { createI18n } from 'vue-i18n'
+import { createHead } from '@unhead/vue'
 
 import VueGtag from "vue-gtag";
 
 import App from './App.vue'
 import router from './router'
+import { i18n } from './translations/i18n.ts'
 
 const app = createApp(App)
 
@@ -17,20 +18,15 @@ app.use(createPinia())
 // Router
 app.use(router)
 
+// Meta
+const head = createHead()
+app.use(head)
+
 if (import.meta.env.MODE === 'production') {
   app.use(VueGtag, {
     config: { id: 'G-BZ8NP8PVMB' }
   }, router);
 }
-
-// i18n
-import { messages } from '@/translations/index.js'
-
-const i18n = createI18n({
-  locale: null,
-  fallbackLocale: null,
-  messages
-})
 
 app.use(i18n)
 

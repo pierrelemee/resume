@@ -1,21 +1,44 @@
-<script setup>
-import { useAgeStore } from '@/stores/age'
-
-const { age } = useAgeStore()
-</script>
-
 <script>
+import { useAgeStore } from '@/stores/age'
+import {useHead, useSeoMeta} from '@unhead/vue'
+import { i18n } from '@/translations/i18n.ts'
+
 import { default as Wall } from '@/components/Wall.vue'
 import { default as LinkedinLogo } from '@/assets/logo-linkedin.svg'
 import { default as GithubLogo } from '@/assets/logo-github.svg'
 import { default as TwitterLogo } from '@/assets/logo-twitter.svg'
 import { default as LastfmLogo } from '@/assets/logo-lastfm.svg'
+import {mapState, storeToRefs} from "pinia";
 
 export default {
+  setup(props) {
+    const store = useAgeStore();
+
+    const {age} = storeToRefs(store)
+
+    useHead({
+      title: i18n.global.t('meta.title', props.locale, {age: age.value}),
+    });
+
+    useSeoMeta({
+      description: i18n.global.t('meta.description', props.locale, {age: age.value}),
+      keywords: i18n.global.t('meta.keywords', props.locale, {age: age.value}),
+      ogImage: `${window.location.origin}/images/pierre.jpeg`,
+      ogDescription: i18n.global.t('meta.og.title', props.locale),
+      ogTitle: i18n.global.t('meta.og.description', props.locale)
+    })
+  },
+  computed: {
+     ...mapState(useAgeStore, ['age'])
+  },
   props: {
     locale: {
       type: String
     }
+  },
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: `Pierre LEMÉE - Ingénieur logiciel en développement web basé à Nantes - ${Math.abs(new Date(Date.now() - new Date('1986-04-02').getTime()).getUTCFullYear() - 1970)} ans`,
   },
   components: {
     Wall,

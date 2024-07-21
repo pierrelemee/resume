@@ -1,4 +1,13 @@
 {
+  "meta": {
+    "title": "Pierre LEMÉE - Software engineer based in Nantes, FRANCE - {age} years old",
+    "description": "Personal website of Pierre Lemée, CTO, senior software engineer and {age} years old developer based in Nantes, France, with 15+ years of experience in Web development",
+    "keywords": "Pierre LEMÉE, CTO, ingénieur logiciel, développement web, Nantes, HTML, CSS, PHP, Symfony, ython, Django, Typescript, Nest, MySQL, PostgreSQL",
+    "og": {
+      "title": "Pierre LEMÉE - Senior software engineer",
+      "description": "Pierre LEMÉE - Senior software engineer specialised in web development, based in Nantes, France"
+    }
+  },
   "header": {
     "h1": {
       "job-title": "Software engineer"

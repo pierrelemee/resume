@@ -1,4 +1,13 @@
 {
+  "meta": {
+    "title": "Pierre LEMÉE - Ingénieur logiciel sénior en développement web basé à Nantes - {age} ans",
+    "description": "Site personnel de Pierre Lemée, CTO, ingénieur logiciel sénior et développeur de {age} ans vivant à Nantes, plus de 15 ans d'expérience dans le développement Web, en startup et dans l'industrie",
+    "keywords": "Pierre LEMÉE, CTO, ingénieur logiciel, développement web, Nantes, HTML, CSS, PHP, Symfony, ython, Django, Typescript, Nest, MySQL, PostgreSQL",
+    "og": {
+      "title": "Pierre LEMÉE - Ingénieur logiciel sénior",
+      "description": "Pierre LEMÉE - Ingénieur logiciel sénior en développement web basé à Nantes"
+    }
+  },
   "header": {
     "h1": {
       "job-title": "Ingénieur logiciel"
