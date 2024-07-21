@@ -24,8 +24,14 @@ export default {
       description: i18n.global.t('meta.description', props.locale, {age: age.value}),
       keywords: i18n.global.t('meta.keywords', props.locale, {age: age.value}),
       ogImage: `${window.location.origin}/images/pierre.jpeg`,
+      ogUrl: window.location.origin,
+      ogLocale: props.locale,
+      ogImageSecureUrl: `${window.location.origin}/images/pierre.jpeg`,
       ogDescription: i18n.global.t('meta.og.title', props.locale),
-      ogTitle: i18n.global.t('meta.og.description', props.locale)
+      ogTitle: i18n.global.t('meta.og.description', props.locale),
+      ogSiteName: 'Pierre LEMEE',
+      ogType: 'website',
+      ogUpdated_at: 1721569685,
     })
   },
   computed: {
