@@ -50,6 +50,7 @@
           "symfony": "Symfony",
           "python": "Python",
           "django": "Django",
+          "fastapi": "FastAPI",
           "flask": "Flask",
           "js": "Javascript",
           "ts": "Typescript",
@@ -77,6 +78,11 @@
       "pro": {
         "title": "Professional experience",
         "jobs": {
+          "akeneo": {
+            "company": "<a href=\"https://akeneo.com/\">Akeneo</a>",
+            "summary": "Senior software engineer // 2024",
+            "description": "<p>I had the chance to join the world leader in PIM solutions (<i>Product Information Management</i>), within the CoreAI team. My mission was to serve AI models, created by machine learning engineers, to other software development teams.</p>"
+          },
           "free": {
             "company": "<a href=\"https://beta.gouv.fr/\">Beta.gouv</a> & <a href=\"https://underdog.shop/\">Underdog</a>",
             "summary": "Developer // 2022 - 2023",

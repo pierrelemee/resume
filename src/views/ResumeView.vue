@@ -42,10 +42,6 @@ export default {
       type: String
     }
   },
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: `Pierre LEMÉE - Ingénieur logiciel en développement web basé à Nantes - ${Math.abs(new Date(Date.now() - new Date('1986-04-02').getTime()).getUTCFullYear() - 1970)} ans`,
-  },
   components: {
     Wall,
     LinkedinLogo,
@@ -226,6 +222,27 @@ export default {
         </section>
         <section :aria-label="$t('content.sections.pro.title', locale)" id="jobs">
           <h3 class="title-red">{{ $t('content.sections.pro.title', locale) }}</h3>
+
+          <div class="job">
+            <div class="job-summary">
+              <h4 v-html="$t('content.sections.pro.jobs.akeneo.company', locale)"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.akeneo.summary', locale)"></h5>
+            </div>
+
+            <div class="job-description">
+              <div v-html="$t('content.sections.pro.jobs.akeneo.description', locale)"></div>
+
+              <div class="skill-badges skill-badges-mini">
+                <span class="skill-badge skill-red skill-secure">{{
+                  $t('content.sections.tech.technos.python', locale)
+                }}</span>
+
+                <span class="skill-badge skill-yellow skill-comfy">{{
+                  $t('content.sections.tech.technos.fastapi', locale)
+                }}</span>
+              </div>
+            </div>
+          </div>
 
           <div class="job">
             <div class="job-summary">
