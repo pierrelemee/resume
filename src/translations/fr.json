@@ -20,7 +20,7 @@
     "social": {
       "linkedin": "Voir mon profil LinkedIn",
       "github": "Voir mon profil Github",
-      "twitter": "Voir mon X (Twitter)",
+      "bluesky": "Voir mon profil Bluesky",
       "lastfm": "Parcourir mon historique musical sur Last.fm"
     }
   },
@@ -40,7 +40,7 @@
     "sections": {
       "intro": {
         "title": "Intro",
-        "description": "<p>Je construis des applications web comme on joue aux <a href=\"https://www.lego.com\" title=\"Lego\">Lego ©</a>, la tech étant une boîte de jeux où les pièces sont infinies et les possibilités sans limites.</p><p>Le code est ma passion, j'aime ce métier d'artisan et la créativité qu'il implique. Même après plus de 10 ans à exercer, je continue d'apprendre au quotidien. J'adhère tout de même à des philosophies comme l'<a hre=\"https://blog.octo.com/egoless-programming/\" title=\"Egoless programming\">egoless programming</a> ou la <a href=\"https://boringtechnology.club/\" title=\"Boring tech\">boring tech</a>.</p><p>J'ai un profil polyvalent, entre développeur fullstack senior, devops ou encore data engineer. J'ai endossé pendant plusieurs années le costume de CTO et manager, et même si aujourd'hui je préfère contribuer en écrivant du code, je peux tout à fait encadrer une équipe et mentorer. J'aimerais approfondir ma connaissance du framework NestJS, mais je peux m'adapter à plein d'autres stacks.</p>"
+        "description": "<p>Je construis des applications web comme on joue aux <a href=\"https://www.lego.com\" title=\"Lego\">Lego ©</a>, la tech étant une boîte de jeux où les pièces sont infinies et les possibilités sans limites.</p><p>Le code est ma passion, j'aime ce métier d'artisan et la créativité qu'il implique. Même après plus de 15 ans à exercer, je continue d'apprendre au quotidien. J'adhère tout de même à des philosophies comme l'<a hre=\"https://blog.octo.com/egoless-programming/\" title=\"Egoless programming\">egoless programming</a> ou la <a href=\"https://boringtechnology.club/\" title=\"Boring tech\">boring tech</a>.</p><p>J'ai un profil polyvalent, entre développeur fullstack senior, devops ou encore data engineer. J'ai endossé pendant plusieurs années le costume de CTO et manager, et même si aujourd'hui je préfère contribuer en écrivant du code, je peux tout à fait encadrer une équipe et mentorer.</p>"
       },
       "tech": {
         "title": "Tech",
@@ -67,6 +67,7 @@
           "spring": "Spring boot",
           "ansible": "Ansible",
           "ci": "CI (Circle / Github actions)",
+          "playwright": "Playwright",
           "aws": "AWS",
           "metabase": "Metabase",
           "rabbit": "RabbitMQ",
@@ -78,15 +79,9 @@
       "pro": {
         "title": "Expérience pro",
         "jobs": {
-          "akeneo": {
-            "company": "<a href=\"https://akeneo.com/\">Akeneo</a>",
-            "summary": "Senior software engineer // 2024",
-            "description": "<p>J'ai eu la chance d'intégrer le leader mondial de solution de PIM (<i>Product Information Management</i>), au sein de l'équipe CoreAI. Ma mission consiste à servir les modèles d'IA, crées par les machine learning engineers, aux autre équipes de développement produit.</p>"
-          },
           "free": {
-            "company": "<a href=\"https://beta.gouv.fr/\">Beta.gouv</a> & <a href=\"https://underdog.shop/\">Underdog</a>",
-            "summary": "Développeur // 2022 - 2023",
-            "description": "<p>Je suis intervenu en tant que freelance pour la startup d'état <a hre=\"https://beta.gouv.fr/startups/apilos.html\">APiLos</a> afin, notamment, de migrer les données depuis la plateforme historique.</p> <p>J'ai également créé des outils d'automatisation pour la startup <strong>Underdog</strong>, via le framework NestJS.</p>"
+            "company": "<a href=\"https://www.malt.fr/profile/pierrelemee\">Freelance</a>",
+            "summary": "Développeur fullstack // 2022 - maintenant"
           },
           "ignition": {
             "company": "<a href=\"https://ignition-program.com/\">Ignition Program</a>",

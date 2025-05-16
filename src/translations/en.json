@@ -20,7 +20,7 @@
     "social": {
       "linkedin": "See my LinkedIn profile",
       "github": "See my Github profile",
-      "twitter": "To my X (Twitter)",
+      "bluesky": "See my Bluesky profile",
       "lastfm": "Browse my musical record on Last.fm"
     }
   },
@@ -40,7 +40,7 @@
     "sections": {
       "intro": {
         "title": "Intro",
-        "description": "<p>I build web apps the you play <a href=\"https://www.lego.com\" title=\"Lego\">Lego ©</a>, tech being an endless box with infinite pieces and possibilities without limits.</p><p>Code is my passion, I like this craftsmanship job for the creativity it requires. Even after 10+ years of work, I keep learning on a daily basis. Nevertheless, I keep following philosophies like <a hre=\"https://blog.octo.com/egoless-programming/\" title=\"Egoless programming\">egoless programming</a> or <a href=\"https://boringtechnology.club/\" title=\"Boring tech\">boring tech</a>.</p><p>I have a polyvalent profile, halfway between senior developer, devops or data engineer. I've been a CTO and a manager for several years, and if today I'd prefer to contribute by writing code, I can lead and a mentor a team. I would like to strengthen my knowledge of the NestJS framework, but I'm adaptable to many different tech stacks.</p>"
+        "description": "<p>I build web apps the you play <a href=\"https://www.lego.com\" title=\"Lego\">Lego ©</a>, tech being an endless box with infinite pieces and possibilities without limits.</p><p>Code is my passion, I like this craftsmanship job for the creativity it requires. Even after 15+ years of work, I keep learning on a daily basis. Nevertheless, I keep following philosophies like <a hre=\"https://blog.octo.com/egoless-programming/\" title=\"Egoless programming\">egoless programming</a> or <a href=\"https://boringtechnology.club/\" title=\"Boring tech\">boring tech</a>.</p><p>I have a polyvalent profile, halfway between senior developer, devops or data engineer. I've been a CTO and a manager for several years, and if today I'd prefer to contribute by writing code, I can lead and / or mentor a team.</p>"
       },
       "tech": {
         "title": "Tech",
@@ -58,15 +58,16 @@
           "mysql": "MySQL",
           "pg": "PostgreSQL",
           "vue": "Vue",
+          "react": "React",
           "bash": "Bash",
           "git": "Git",
           "bootstrap": "Bootstrap",
-          "react": "React",
           "tailwind": "Tailwind",
           "java": "Java",
           "spring": "Spring boot",
           "ansible": "Ansible",
           "ci": "CI (Circle / Github actions)",
+          "playwright": "Playwright",
           "aws": "AWS",
           "metabase": "Metabase",
           "rabbit": "RabbitMQ",
@@ -78,15 +79,9 @@
       "pro": {
         "title": "Professional experience",
         "jobs": {
-          "akeneo": {
-            "company": "<a href=\"https://akeneo.com/\">Akeneo</a>",
-            "summary": "Senior software engineer // 2024",
-            "description": "<p>I had the chance to join the world leader in PIM solutions (<i>Product Information Management</i>), within the CoreAI team. My mission was to serve AI models, created by machine learning engineers, to other software development teams.</p>"
-          },
           "free": {
-            "company": "<a href=\"https://beta.gouv.fr/\">Beta.gouv</a> & <a href=\"https://underdog.shop/\">Underdog</a>",
-            "summary": "Developer // 2022 - 2023",
-            "description": "<p>Intervened as freelance developer for a French State startup <a hre=\"https://beta.gouv.fr/startups/apilos.html\">APiLos</a> in order to migrate data from the historical platform.</p> <p>I also created automation tools for the startup <strong>Underdog</strong>, via the NestJS framework.</p>"
+            "company": "<a href=\"https://www.malt.fr/profile/pierrelemee\">Freelance</a>",
+            "summary": "Fulstack developer // 2022 - now"
           },
           "ignition": {
             "company": "<a href=\"https://ignition-program.com/\">Ignition Program</a>",
