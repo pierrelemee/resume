@@ -13,15 +13,20 @@ RUN echo "alias la='ls -la'" >> /root/.bashrc
 RUN echo "PS1='\[\033[01;35m\]\h \[\033[01;34m\]\w $\[\033[00m\] '" >> /root/.bashrc
 RUN echo "export LANG='fr_FR.UTF8'" >> /root/.bashrc
 
-COPY package.json yarn.lock /tmp/build/
+RUN npm install -g pnpm
+
+ADD package.json pnpm-lock.yaml /tmp/build/
+
+ADD src /tmp/build/src
+ADD public /tmp/build/public
+ADD index.html Caddyfile vite.config.js /tmp/build/
 
 WORKDIR /tmp/build
-#RUN --mount=type=cache,target=/root/.yarn YARN_CACHE_FOLDER=/root/.yarn yarn install --prod --frozen-lockfile
-RUN yarn install --prod --frozen-lockfile
+RUN pnpm install --frozen-lockfile --prod
 
-COPY src public index.html Caddyfile vite.config.js /tmp/build/
+RUN ls -la
 
-RUN yarn build --outDir /app
+RUN pnpm run build --outDir /app
 
 WORKDIR /app
 
