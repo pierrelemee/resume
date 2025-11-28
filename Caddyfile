@@ -1,6 +1,6 @@
-localhost:3000 {
+:3000 {
 	root * /app
-	encode
+	encode gzip
+    file_server
 	try_files {path} /index.html
-	file_server
 }

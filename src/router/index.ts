@@ -10,9 +10,7 @@ const router = createRouter({
       name: 'home',
       redirect: () => {
         const browserLocale =
-          navigator.languages && navigator.languages.length
-            ? navigator.languages[0]
-            : navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en'
+            navigator.language ?? navigator.languages?.at(0) ?? 'en'
 
         if (browserLocale === 'fr') {
           return { path: '/fr' }

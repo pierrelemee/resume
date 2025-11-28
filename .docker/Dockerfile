@@ -19,19 +19,19 @@ ADD package.json pnpm-lock.yaml /tmp/build/
 
 ADD src /tmp/build/src
 ADD public /tmp/build/public
-ADD index.html Caddyfile vite.config.js /tmp/build/
+ADD index.html vite.config.js /tmp/build/
 
 WORKDIR /tmp/build
 RUN pnpm install --frozen-lockfile --prod
-
-RUN ls -la
 
 RUN pnpm run build --outDir /app
 
 WORKDIR /app
 
+ADD Caddyfile /app
+
 RUN rm -Rf /tmp/build
 
 EXPOSE 3000
 
-CMD ["caddy", "start", "-c", "/app/Caddyfile"]
+CMD ["caddy", "run", "-c", "/app/Caddyfile"]

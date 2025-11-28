@@ -7,8 +7,8 @@ import { createHead } from '@unhead/vue'
 import VueGtag from "vue-gtag";
 
 import App from './App.vue'
-import router from './router'
-import { i18n } from './translations/i18n.ts'
+import router from './router/'
+import { i18n } from './translations/i18n'
 
 const app = createApp(App)
 

@@ -14,7 +14,7 @@ RUN echo "alias la='ls -la'" >> /root/.bashrc
 RUN echo "PS1='\[\033[01;35m\]\h \[\033[01;34m\]\w $\[\033[00m\] '" >> /root/.bashrc
 RUN echo "export LANG='fr_FR.UTF8'" >> /root/.bashrc
 
-COPY .docker/nginx/ssl/* /etc/nginx/certs/
-COPY .docker/nginx/templates/*.template /etc/nginx/templates/
+ADD nginx/ssl/* /etc/nginx/certs/
+ADD nginx/templates/*.template /etc/nginx/templates/
 
 WORKDIR /app

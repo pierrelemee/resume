@@ -1,17 +1,17 @@
-version: "3.9"
-
 name: "resume"
 services:
-  vue: &nest
+  vue:
     hostname: vue
     stdin_open: true
     tty: true
     build:
-      dockerfile: .docker/node.dockerfile
+      context: .docker
+      dockerfile: node.dockerfile
     command: bash -c "pnpm install && pnpm run dev --host"
     #command: bash -c 'sleep 3600'
     volumes:
       - .:/app:rw
+      - /app/node_modules
     environment:
       - NODE_ENV=development
     ports:
@@ -22,7 +22,8 @@ services:
     stdin_open: true
     tty: true
     build:
-      dockerfile: .docker/nginx.dockerfile
+      context: .docker
+      dockerfile: nginx.dockerfile
     volumes:
       - .:/app
     ports:

@@ -42,6 +42,16 @@ export default {
       type: String
     }
   },
+  watch: {
+    // Met à jour la locale de vue-i18n quand la prop `locale` change
+    locale(newLocale) {
+      this.$i18n.locale = newLocale;
+    },
+  },
+  created() {
+    // Définit la locale au chargement du composant
+    this.$i18n.locale = this.locale;
+  },
   components: {
     Wall,
     LinkedinLogo,
@@ -58,15 +68,15 @@ export default {
   <aside>
     <a
       class="block red3"
-      :href="$t('aside.pdf.href', locale)"
-      :title="$t('aside.pdf.title', locale)"
-      >{{ $t('aside.pdf.label', locale) }}</a
+      :href="$t('aside.pdf.href')"
+      :title="$t('aside.pdf.title')"
+      >{{ $t('aside.pdf.label') }}</a
     >
     <a
       class="block blue2"
-      :href="$t('aside.translate.href', locale)"
-      :title="$t('aside.translate.title', locale)"
-      >{{ $t('aside.translate.label', locale) }}</a
+      :href="$t('aside.translate.href')"
+      :title="$t('aside.translate.title')"
+      >{{ $t('aside.translate.label') }}</a
     >
   </aside>
 
@@ -76,14 +86,14 @@ export default {
         <div class="name">
           <h1>
             Pierre LEMÉE //
-            <span class="soft-title" v-t="{ path: 'header.h1.job-title', locale }"></span>
+            <span class="soft-title">{{ $t('header.h1.job-title') }}</span>
           </h1>
         </div>
         <div class="job">
           <h2>
-            {{ $t('header.h2.gender', locale) }} //
-            <span class="soft-title">{{ $t('header.h2.age', locale, { age }) }}</span> //
-            <span class="soft-title">{{ $t('header.h2.nationality', locale) }}</span>
+            {{ $t('header.h2.gender') }} //
+            <span class="soft-title">{{ $t('header.h2.age', { age }) }}</span> //
+            <span class="soft-title">{{ $t('header.h2.nationality') }}</span>
           </h2>
         </div>
         <div class="social">
@@ -91,7 +101,7 @@ export default {
             class="padded"
             href="https://www.linkedin.com/in/pierre-lemee/"
             target="_blank"
-            :title="$t('header.social.linkedin', locale)"
+            :title="$t('header.social.linkedin')"
           >
             <LinkedinLogo />
           </a>
@@ -99,14 +109,14 @@ export default {
           <a
             href="https://www.github.com/pierrelemee"
             target="_blank"
-            :title="$t('header.social.github', locale)"
+            :title="$t('header.social.github')"
           >
             <GithubLogo />
           </a>
           <a
             href="https://bsky.app/profile/pierrelemee.fr"
             target="_blank"
-            :title="$t('header.social.bluesky', locale)"
+            :title="$t('header.social.bluesky')"
 
           >
             <BlueskyLogo />
@@ -114,7 +124,7 @@ export default {
           <a
             href="https://www.last.fm/user/pitipout/library/artists"
             target="_blank"
-            :title="$t('header.social.lastfm', locale)"
+            :title="$t('header.social.lastfm')"
           >
             <LastfmLogo />
           </a>
@@ -122,15 +132,15 @@ export default {
       </header>
 
       <div id="content">
-        <section :aria-label="$t('content.sections.intro.title', locale)">
-          <h3 class="title-blue">{{ $t('content.sections.intro.title', locale) }}</h3>
-          <div v-html="$t('content.sections.intro.description', locale)"></div>
+        <section :aria-label="$t('content.sections.intro.title')">
+          <h3 class="title-blue">{{ $t('content.sections.intro.title') }}</h3>
+          <div v-html="$t('content.sections.intro.description')"></div>
         </section>
-        <section :aria-label="$t('content.sections.tech.title', locale)" class="skills">
-          <h3 class="title-yellow">{{ $t('content.sections.tech.title', locale) }}</h3>
+        <section :aria-label="$t('content.sections.tech.title')" class="skills">
+          <h3 class="title-yellow">{{ $t('content.sections.tech.title') }}</h3>
 
           <div class="skill-badges">
-            <p>{{ $t('content.sections.tech.description', locale) }}</p>
+            <p>{{ $t('content.sections.tech.description') }}</p>
             <!--
               Legend:
               - red for languages
@@ -147,95 +157,95 @@ export default {
               **or** by universe
             -->
             <span class="skill-badge skill-red skill-master">{{
-              $t('content.sections.tech.technos.php', locale)
+              $t('content.sections.tech.technos.php')
             }}</span>
             <span class="skill-badge skill-yellow skill-secure">{{
-              $t('content.sections.tech.technos.symfony', locale)
+              $t('content.sections.tech.technos.symfony')
             }}</span>
             <span class="skill-badge skill-red skill-secure">{{
-              $t('content.sections.tech.technos.ts', locale)
+              $t('content.sections.tech.technos.ts')
             }}</span>
             <span class="skill-badge skill-red skill-secure">{{
-              $t('content.sections.tech.technos.python', locale)
+              $t('content.sections.tech.technos.python')
             }}</span>
             <span class="skill-badge skill-yellow skill-secure">{{
-              $t('content.sections.tech.technos.django', locale)
+              $t('content.sections.tech.technos.django')
             }}</span>
             <span class="skill-badge skill-yellow skill-comfy">{{
-              $t('content.sections.tech.technos.flask', locale)
+              $t('content.sections.tech.technos.flask')
             }}</span>
             <span class="skill-badge skill-red skill-secure">{{
-              $t('content.sections.tech.technos.js', locale)
+              $t('content.sections.tech.technos.js')
             }}</span>
             <span class="skill-badge skill-yellow skill-comfy">{{
-              $t('content.sections.tech.technos.nest', locale)
+              $t('content.sections.tech.technos.nest')
             }}</span>
             <span class="skill-badge skill-white skill-master">{{
-              $t('content.sections.tech.technos.mysql', locale)
+              $t('content.sections.tech.technos.mysql')
             }}</span>
             <span class="skill-badge skill-white skill-secure">{{
-              $t('content.sections.tech.technos.pg', locale)
+              $t('content.sections.tech.technos.pg')
             }}</span>
             <span class="skill-badge skill-blue skill-secure">{{
-              $t('content.sections.tech.technos.vue', locale)
+              $t('content.sections.tech.technos.vue')
             }}</span>
             <span class="skill-badge skill-blue skill-secure">{{
-              $t('content.sections.tech.technos.react', locale)
+              $t('content.sections.tech.technos.react')
             }}</span>
             <span class="skill-badge skill-black skill-master">{{
-              $t('content.sections.tech.technos.bash', locale)
+              $t('content.sections.tech.technos.bash')
             }}</span>
             <span class="skill-badge skill-black skill-secure">{{
-              $t('content.sections.tech.technos.git', locale)
+              $t('content.sections.tech.technos.git')
             }}</span>
             <span class="skill-badge skill-blue skill-secure">{{
-              $t('content.sections.tech.technos.bootstrap', locale)
+              $t('content.sections.tech.technos.bootstrap')
             }}</span>
             <span class="skill-badge skill-blue skill-comfy">{{
-              $t('content.sections.tech.technos.tailwind', locale)
+              $t('content.sections.tech.technos.tailwind')
             }}</span>
             <span class="skill-badge skill-red skill-comfy">{{
-              $t('content.sections.tech.technos.java', locale)
+              $t('content.sections.tech.technos.java')
             }}</span>
             <span class="skill-badge skill-yellow skill-padawan">{{
-              $t('content.sections.tech.technos.spring', locale)
+              $t('content.sections.tech.technos.spring')
             }}</span>
             <span class="skill-badge skill-black skill-comfy">{{
-              $t('content.sections.tech.technos.ansible', locale)
+              $t('content.sections.tech.technos.ansible')
             }}</span>
             <span class="skill-badge skill-black skill-secure">{{
-              $t('content.sections.tech.technos.ci', locale)
+              $t('content.sections.tech.technos.ci')
             }}</span>
             <span class="skill-badge skill-blue skill-comfy">{{
-              $t('content.sections.tech.technos.playwright', locale)
+              $t('content.sections.tech.technos.playwright')
             }}</span>
             <span class="skill-badge skill-black skill-comfy">{{
-              $t('content.sections.tech.technos.aws', locale)
+              $t('content.sections.tech.technos.aws')
             }}</span>
             <span class="skill-badge skill-white skill-secure">{{
-              $t('content.sections.tech.technos.metabase', locale)
+              $t('content.sections.tech.technos.metabase')
             }}</span>
             <span class="skill-badge skill-black skill-secure">{{
-              $t('content.sections.tech.technos.rabbit', locale)
+              $t('content.sections.tech.technos.rabbit')
             }}</span>
             <span class="skill-badge skill-black skill-comfy">{{
-              $t('content.sections.tech.technos.redis', locale)
+              $t('content.sections.tech.technos.redis')
             }}</span>
             <span class="skill-badge skill-black skill-padawan">{{
-              $t('content.sections.tech.technos.es', locale)
+              $t('content.sections.tech.technos.es')
             }}</span>
             <span class="skill-badge skill-white skill-padawan">{{
-              $t('content.sections.tech.technos.hadoop', locale)
+              $t('content.sections.tech.technos.hadoop')
             }}</span>
           </div>
         </section>
-        <section :aria-label="$t('content.sections.pro.title', locale)" id="jobs">
-          <h3 class="title-red">{{ $t('content.sections.pro.title', locale) }}</h3>
+        <section :aria-label="$t('content.sections.pro.title')" id="jobs">
+          <h3 class="title-red">{{ $t('content.sections.pro.title') }}</h3>
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.free.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.free.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.free.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.free.summary')"></h5>
             </div>
 
             <div class="job-description">
@@ -283,40 +293,40 @@ export default {
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-red skill-master">{{
-                  $t('content.sections.tech.technos.ts', locale)
+                  $t('content.sections.tech.technos.ts')
                 }}</span>
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.python', locale)
+                  $t('content.sections.tech.technos.python')
                 }}</span>
                 <span class="skill-badge skill-yellow skill-secure">{{
-                  $t('content.sections.tech.technos.django', locale)
+                  $t('content.sections.tech.technos.django')
                 }}</span>
                 <span class="skill-badge skill-blue skill-secure">{{
-                  $t('content.sections.tech.technos.react', locale)
+                  $t('content.sections.tech.technos.react')
                 }}</span>
                 <span class="skill-badge skill-yellow skill-secure">{{
-                  $t('content.sections.tech.technos.nest', locale)
+                  $t('content.sections.tech.technos.nest')
                 }}</span>
                 <span class="skill-badge skill-white skill-secure">{{
-                  $t('content.sections.tech.technos.pg', locale)
+                  $t('content.sections.tech.technos.pg')
                 }}</span>
                 <span class="skill-badge skill-blue skill-comfy">{{
-                  $t('content.sections.tech.technos.vue', locale)
+                  $t('content.sections.tech.technos.vue')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.git', locale)
+                  $t('content.sections.tech.technos.git')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.ci', locale)
+                  $t('content.sections.tech.technos.ci')
                 }}</span>
                 <span class="skill-badge skill-white skill-comfy">{{
-                  $t('content.sections.tech.technos.metabase', locale)
+                  $t('content.sections.tech.technos.metabase')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.redis', locale)
+                  $t('content.sections.tech.technos.redis')
                 }}</span>
                 <span class="skill-badge skill-blue skill-padawan">{{
-                  $t('content.sections.tech.technos.playwright', locale)
+                  $t('content.sections.tech.technos.playwright')
                 }}</span>
               </div>
             </div>
@@ -324,44 +334,44 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.ignition.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.ignition.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.ignition.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.ignition.summary')"></h5>
             </div>
 
             <div class="job-description">
-              <div v-html="$t('content.sections.pro.jobs.ignition.description', locale)"></div>
+              <div v-html="$t('content.sections.pro.jobs.ignition.description')"></div>
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.python', locale)
+                  $t('content.sections.tech.technos.python')
                 }}</span>
                 <span class="skill-badge skill-yellow skill-master">{{
-                  $t('content.sections.tech.technos.django', locale)
+                  $t('content.sections.tech.technos.django')
                 }}</span>
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.js', locale)
+                  $t('content.sections.tech.technos.js')
                 }}</span>
                 <span class="skill-badge skill-white skill-secure">{{
-                  $t('content.sections.tech.technos.pg', locale)
+                  $t('content.sections.tech.technos.pg')
                 }}</span>
                 <span class="skill-badge skill-blue skill-comfy">{{
-                  $t('content.sections.tech.technos.vue', locale)
+                  $t('content.sections.tech.technos.vue')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.git', locale)
+                  $t('content.sections.tech.technos.git')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.ansible', locale)
+                  $t('content.sections.tech.technos.ansible')
                 }}</span>
 
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.ci', locale)
+                  $t('content.sections.tech.technos.ci')
                 }}</span>
                 <span class="skill-badge skill-white skill-comfy">{{
-                  $t('content.sections.tech.technos.metabase', locale)
+                  $t('content.sections.tech.technos.metabase')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.aws', locale)
+                  $t('content.sections.tech.technos.aws')
                 }}</span>
               </div>
             </div>
@@ -369,49 +379,49 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.bloom.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.bloom.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.bloom.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.bloom.summary')"></h5>
             </div>
 
             <div class="job-description">
-              <div v-html="$t('content.sections.pro.jobs.bloom.description', locale)"></div>
+              <div v-html="$t('content.sections.pro.jobs.bloom.description')"></div>
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-red skill-master">{{
-                  $t('content.sections.tech.technos.php', locale)
+                  $t('content.sections.tech.technos.php')
                 }}</span>
                 <span class="skill-badge skill-yellow skill-secure">{{
-                  $t('content.sections.tech.technos.symfony', locale)
+                  $t('content.sections.tech.technos.symfony')
                 }}</span>
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.js', locale)
+                  $t('content.sections.tech.technos.js')
                 }}</span>
                 <span class="skill-badge skill-white skill-master">{{
-                  $t('content.sections.tech.technos.mysql', locale)
+                  $t('content.sections.tech.technos.mysql')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.git', locale)
+                  $t('content.sections.tech.technos.git')
                 }}</span>
                 <span class="skill-badge skill-blue skill-padawan">{{
-                  $t('content.sections.tech.technos.react', locale)
+                  $t('content.sections.tech.technos.react')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.ansible', locale)
+                  $t('content.sections.tech.technos.ansible')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.ci', locale)
+                  $t('content.sections.tech.technos.ci')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.aws', locale)
+                  $t('content.sections.tech.technos.aws')
                 }}</span>
                 <span class="skill-badge skill-white skill-secure">{{
-                  $t('content.sections.tech.technos.metabase', locale)
+                  $t('content.sections.tech.technos.metabase')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.rabbit', locale)
+                  $t('content.sections.tech.technos.rabbit')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.redis', locale)
+                  $t('content.sections.tech.technos.redis')
                 }}</span>
               </div>
             </div>
@@ -419,40 +429,40 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.billogram.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.billogram.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.billogram.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.billogram.summary')"></h5>
             </div>
 
             <div class="job-description">
-              <div v-html="$t('content.sections.pro.jobs.billogram.description', locale)"></div>
+              <div v-html="$t('content.sections.pro.jobs.billogram.description')"></div>
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-red skill-master">{{
-                  $t('content.sections.tech.technos.php', locale)
+                  $t('content.sections.tech.technos.php')
                 }}</span>
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.python', locale)
+                  $t('content.sections.tech.technos.python')
                 }}</span>
                 <span class="skill-badge skill-yellow skill-comfy">{{
-                  $t('content.sections.tech.technos.flask', locale)
+                  $t('content.sections.tech.technos.flask')
                 }}</span>
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.js', locale)
+                  $t('content.sections.tech.technos.js')
                 }}</span>
                 <span class="skill-badge skill-white skill-master">{{
-                  $t('content.sections.tech.technos.mysql', locale)
+                  $t('content.sections.tech.technos.mysql')
                 }}</span>
                 <span class="skill-badge skill-black skill-master">{{
-                  $t('content.sections.tech.technos.bash', locale)
+                  $t('content.sections.tech.technos.bash')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.git', locale)
+                  $t('content.sections.tech.technos.git')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.ci', locale)
+                  $t('content.sections.tech.technos.ci')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.redis', locale)
+                  $t('content.sections.tech.technos.redis')
                 }}</span>
               </div>
             </div>
@@ -460,41 +470,41 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.senscritique.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.senscritique.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.senscritique.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.senscritique.summary')"></h5>
             </div>
 
             <div class="job-description">
-              <div v-html="$t('content.sections.pro.jobs.senscritique.description', locale)"></div>
+              <div v-html="$t('content.sections.pro.jobs.senscritique.description')"></div>
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-red skill-master">{{
-                  $t('content.sections.tech.technos.php', locale)
+                  $t('content.sections.tech.technos.php')
                 }}</span>
                 <span class="skill-badge skill-red skill-comfy">{{
-                  $t('content.sections.tech.technos.java', locale)
+                  $t('content.sections.tech.technos.java')
                 }}</span>
                 <span class="skill-badge skill-yellow skill-padawan">{{
-                  $t('content.sections.tech.technos.spring', locale)
+                  $t('content.sections.tech.technos.spring')
                 }}</span
                 >>
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.js', locale)
+                  $t('content.sections.tech.technos.js')
                 }}</span>
                 <span class="skill-badge skill-white skill-master">{{
-                  $t('content.sections.tech.technos.mysql', locale)
+                  $t('content.sections.tech.technos.mysql')
                 }}</span>
                 <span class="skill-badge skill-black skill-master">{{
-                  $t('content.sections.tech.technos.bash', locale)
+                  $t('content.sections.tech.technos.bash')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.git', locale)
+                  $t('content.sections.tech.technos.git')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.ci', locale)
+                  $t('content.sections.tech.technos.ci')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.redis', locale)
+                  $t('content.sections.tech.technos.redis')
                 }}</span>
               </div>
             </div>
@@ -502,52 +512,52 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.blablacar.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.blablacar.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.blablacar.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.blablacar.summary')"></h5>
             </div>
 
             <div class="job-description">
-              <div v-html="$t('content.sections.pro.jobs.blablacar.description', locale)"></div>
+              <div v-html="$t('content.sections.pro.jobs.blablacar.description')"></div>
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-red skill-master">{{
-                  $t('content.sections.tech.technos.php', locale)
+                  $t('content.sections.tech.technos.php')
                 }}</span>
                 <span class="skill-badge skill-yellow skill-secure">{{
-                  $t('content.sections.tech.technos.symfony', locale)
+                  $t('content.sections.tech.technos.symfony')
                 }}</span>
                 <span class="skill-badge skill-red skill-secure">{{
-                  $t('content.sections.tech.technos.js', locale)
+                  $t('content.sections.tech.technos.js')
                 }}</span>
                 <span class="skill-badge skill-white skill-master">{{
-                  $t('content.sections.tech.technos.mysql', locale)
+                  $t('content.sections.tech.technos.mysql')
                 }}</span>
                 <span class="skill-badge skill-black skill-master">{{
-                  $t('content.sections.tech.technos.bash', locale)
+                  $t('content.sections.tech.technos.bash')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.git', locale)
+                  $t('content.sections.tech.technos.git')
                 }}</span>
                 <span class="skill-badge skill-blue skill-secure">{{
-                  $t('content.sections.tech.technos.bootstrap', locale)
+                  $t('content.sections.tech.technos.bootstrap')
                 }}</span>
                 <span class="skill-badge skill-red skill-comfy">{{
-                  $t('content.sections.tech.technos.java', locale)
+                  $t('content.sections.tech.technos.java')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.ci', locale)
+                  $t('content.sections.tech.technos.ci')
                 }}</span>
                 <span class="skill-badge skill-black skill-secure">{{
-                  $t('content.sections.tech.technos.rabbit', locale)
+                  $t('content.sections.tech.technos.rabbit')
                 }}</span>
                 <span class="skill-badge skill-black skill-comfy">{{
-                  $t('content.sections.tech.technos.redis', locale)
+                  $t('content.sections.tech.technos.redis')
                 }}</span>
                 <span class="skill-badge skill-black skill-padawan">{{
-                  $t('content.sections.tech.technos.es', locale)
+                  $t('content.sections.tech.technos.es')
                 }}</span>
                 <span class="skill-badge skill-white skill-padawan">{{
-                  $t('content.sections.tech.technos.hadoop', locale)
+                  $t('content.sections.tech.technos.hadoop')
                 }}</span>
               </div>
             </div>
@@ -555,22 +565,22 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.altran.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.altran.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.altran.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.altran.summary')"></h5>
             </div>
 
             <div class="job-description">
-              <div v-html="$t('content.sections.pro.jobs.altran.description', locale)"></div>
+              <div v-html="$t('content.sections.pro.jobs.altran.description')"></div>
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-white skill-master">{{
-                  $t('content.sections.tech.technos.mysql', locale)
+                  $t('content.sections.tech.technos.mysql')
                 }}</span>
                 <span class="skill-badge skill-black skill-master">{{
-                  $t('content.sections.tech.technos.bash', locale)
+                  $t('content.sections.tech.technos.bash')
                 }}</span>
                 <span class="skill-badge skill-red skill-comfy">{{
-                  $t('content.sections.tech.technos.java', locale)
+                  $t('content.sections.tech.technos.java')
                 }}</span>
               </div>
             </div>
@@ -578,56 +588,56 @@ export default {
 
           <div class="job">
             <div class="job-summary">
-              <h4 v-html="$t('content.sections.pro.jobs.thales.company', locale)"></h4>
-              <h5 v-html="$t('content.sections.pro.jobs.thales.summary', locale)"></h5>
+              <h4 v-html="$t('content.sections.pro.jobs.thales.company')"></h4>
+              <h5 v-html="$t('content.sections.pro.jobs.thales.summary')"></h5>
             </div>
 
             <div class="job-description">
-              <div v-html="$t('content.sections.pro.jobs.thales.description', locale)"></div>
+              <div v-html="$t('content.sections.pro.jobs.thales.description')"></div>
 
               <div class="skill-badges skill-badges-mini">
                 <span class="skill-badge skill-black skill-master">{{
-                  $t('content.sections.tech.technos.bash', locale)
+                  $t('content.sections.tech.technos.bash')
                 }}</span>
                 <span class="skill-badge skill-red skill-comfy">{{
-                  $t('content.sections.tech.technos.java', locale)
+                  $t('content.sections.tech.technos.java')
                 }}</span>
               </div>
             </div>
           </div>
         </section>
 
-        <section :aria-label="$t('content.sections.misc.title', locale)">
-          <h3 class="title-black">{{ $t('content.sections.misc.title', locale) }}</h3>
+        <section :aria-label="$t('content.sections.misc.title')">
+          <h3 class="title-black">{{ $t('content.sections.misc.title') }}</h3>
 
-          <p v-html="$t('content.sections.misc.content.languages', locale)"></p>
-          <p v-html="$t('content.sections.misc.content.hobbies', locale)"></p>
-          <p v-html="$t('content.sections.misc.content.likes', locale)"></p>
-          <p v-html="$t('content.sections.misc.content.life', locale)"></p>
+          <p v-html="$t('content.sections.misc.content.languages')"></p>
+          <p v-html="$t('content.sections.misc.content.hobbies')"></p>
+          <p v-html="$t('content.sections.misc.content.likes')"></p>
+          <p v-html="$t('content.sections.misc.content.life')"></p>
         </section>
 
-        <section :aria-label="$t('content.sections.education.title', locale)">
-          <h3 class="title-blue">{{ $t('content.sections.education.title', locale) }}</h3>
+        <section :aria-label="$t('content.sections.education.title')">
+          <h3 class="title-blue">{{ $t('content.sections.education.title') }}</h3>
 
           <div class="job">
             <div class="job-summary">
-              <h4>{{ $t('content.sections.education.schools.afti.diploma', locale) }}</h4>
-              <h5>{{ $t('content.sections.education.schools.afti.summary', locale) }}</h5>
+              <h4>{{ $t('content.sections.education.schools.afti.diploma') }}</h4>
+              <h5>{{ $t('content.sections.education.schools.afti.summary') }}</h5>
             </div>
 
             <div class="job-description">
-              <p v-html="$t('content.sections.education.schools.afti.description', locale)"></p>
+              <p v-html="$t('content.sections.education.schools.afti.description')"></p>
             </div>
           </div>
 
           <div class="job">
             <div class="job-summary">
-              <h4>{{ $t('content.sections.education.schools.fac.diploma', locale) }}</h4>
-              <h5>{{ $t('content.sections.education.schools.fac.summary', locale) }}</h5>
+              <h4>{{ $t('content.sections.education.schools.fac.diploma') }}</h4>
+              <h5>{{ $t('content.sections.education.schools.fac.summary') }}</h5>
             </div>
 
             <div class="job-description">
-              <p v-html="$t('content.sections.education.schools.fac.description', locale)"></p>
+              <p v-html="$t('content.sections.education.schools.fac.description')"></p>
             </div>
           </div>
         </section>
