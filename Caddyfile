@@ -1,6 +1,6 @@
 :3000 {
 	root * /app
 	encode gzip
-    file_server
+	file_server
 	try_files {path} /index.html
 }

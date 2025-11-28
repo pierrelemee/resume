@@ -21,7 +21,9 @@ echo '127.0.0.1 dev.pierrelemee.fr' | sudo tee -a /etc/hosts
 Build and push Docker image:
 
 ```bash
-docker buildx build --no-cache . -f .docker/Dockerfile -t ghcr.io/pierrelemee/resume
+# Before push, make sure you're logged in to Github Container Registry :
 echo $GH_PAT | docker login ghcr.io -u pierrelemee --password-stdin
-docker push ghcr.io/pierrelemee/resume
+
+# Before build, make sure you're using a multi-arch `buildx` builder
+GTAG_ID=<GTAG_ID> docker buildx build --platform linux/amd64 --no-cache . -f .docker/Dockerfile -t ghcr.io/pierrelemee/resume:$(git rev-parse HEAD) -t ghcr.io/pierrelemee/resume:latest --push
 ```

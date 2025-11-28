@@ -7,8 +7,8 @@ import { createHead } from '@unhead/vue'
 import VueGtag from "vue-gtag";
 
 import App from './App.vue'
-import router from './router/'
-import { i18n } from './translations/i18n'
+import router from './router/index.ts'
+import { i18n } from './translations/i18n.ts'
 
 const app = createApp(App)
 
@@ -24,7 +24,7 @@ app.use(head)
 
 if (import.meta.env.MODE === 'production') {
   app.use(VueGtag, {
-    config: { id: 'G-BZ8NP8PVMB' }
+    config: { id: import.meta.env.GTAG_ID}
   }, router);
 }
 

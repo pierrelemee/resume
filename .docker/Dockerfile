@@ -1,5 +1,8 @@
 FROM node:20-alpine
 
+ARG GTAG_ID
+ENV GTAG_ID=GTAG_ID
+
 # Update & install core packages
 RUN apk update
 RUN apk upgrade
@@ -35,3 +38,4 @@ RUN rm -Rf /tmp/build
 EXPOSE 3000
 
 CMD ["caddy", "run", "-c", "/app/Caddyfile"]
+ENTRYPOINT ["caddy", "run", "-c", "/app/Caddyfile"]
