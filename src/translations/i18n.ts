@@ -4,11 +4,11 @@ import { createI18n } from 'vue-i18n'
 import { messages } from './index.ts'
 
 const i18n = createI18n({
-  locale: null,
-  fallbackLocale: null,
-    //legacy: false,
-    // Refer a global scope Composer instance of i18n
-	globalInjection: true,
+  legacy: false,
+  locale: 'en',
+  fallbackLocale: 'en',
+  // Expose $t etc. in templates from the global Composer instance
+  globalInjection: true,
   messages
 });
 

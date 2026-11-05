@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: 'new'
+    headless: true
   });
   const page = await browser.newPage();
 

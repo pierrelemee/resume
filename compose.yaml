@@ -1,5 +1,3 @@
-version: "3.9"
-
 name: "resume"
 services:
   vue: &nest
@@ -12,6 +10,7 @@ services:
     #command: bash -c 'sleep 3600'
     volumes:
       - .:/app:rw
+      - /app/node_modules
     environment:
       - NODE_ENV=development
     ports:
@@ -22,6 +21,7 @@ services:
     stdin_open: true
     tty: true
     build:
+      context: .
       dockerfile: .docker/nginx.dockerfile
     volumes:
       - .:/app

@@ -1,4 +1,5 @@
-FROM node:20-alpine
+# syntax=docker/dockerfile:1
+FROM node:23-alpine
 
 # Update & install core packages
 RUN apk update
@@ -19,7 +20,7 @@ WORKDIR /tmp/build
 #RUN --mount=type=cache,target=/root/.yarn YARN_CACHE_FOLDER=/root/.yarn yarn install --prod --frozen-lockfile
 RUN yarn install --prod --frozen-lockfile
 
-COPY src public index.html Caddyfile vite.config.js /tmp/build/
+COPY --parents index.html Caddyfile vite.config.js src public tools /tmp/build/
 
 RUN yarn build --outDir /app
 
