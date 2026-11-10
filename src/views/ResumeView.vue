@@ -1,6 +1,6 @@
 <script>
 import { useAgeStore } from '@/stores/age'
-import {useHead, useSeoMeta} from '@unhead/vue'
+import { useHead, useSeoMeta } from '@unhead/vue'
 import { i18n } from '@/translations/i18n.ts'
 
 import { default as Wall } from '@/components/Wall.vue'
@@ -8,19 +8,19 @@ import { default as LinkedinLogo } from '@/assets/logo-linkedin.svg'
 import { default as GithubLogo } from '@/assets/logo-github.svg'
 import { default as BlueskyLogo } from '@/assets/logo-bluesky.svg'
 import { default as LastfmLogo } from '@/assets/logo-lastfm.svg'
-import {mapState, storeToRefs} from "pinia";
+import { mapState, storeToRefs } from 'pinia'
 
 export default {
   setup(props) {
     i18n.global.locale.value = props.locale
 
-    const store = useAgeStore();
+    const store = useAgeStore()
 
-    const {age} = storeToRefs(store)
+    const { age } = storeToRefs(store)
 
     useHead({
-      title: i18n.global.t('meta.title', { age: age.value }),
-    });
+      title: i18n.global.t('meta.title', { age: age.value })
+    })
 
     useSeoMeta({
       description: i18n.global.t('meta.description', { age: age.value }),
@@ -33,11 +33,11 @@ export default {
       ogTitle: i18n.global.t('meta.og.title'),
       ogSiteName: 'Pierre LEMEE',
       ogType: 'website',
-      ogUpdated_at: 1747389656,
+      ogUpdated_at: 1747389656
     })
   },
   computed: {
-     ...mapState(useAgeStore, ['age'])
+    ...mapState(useAgeStore, ['age'])
   },
   props: {
     locale: {
@@ -58,12 +58,9 @@ export default {
   <Wall position="left"></Wall>
 
   <aside>
-    <a
-      class="block red3"
-      :href="$t('aside.pdf.href')"
-      :title="$t('aside.pdf.title')"
-      >{{ $t('aside.pdf.label') }}</a
-    >
+    <a class="block red3" :href="$t('aside.pdf.href')" :title="$t('aside.pdf.title')">{{
+      $t('aside.pdf.label')
+    }}</a>
     <a
       class="block blue2"
       :href="$t('aside.translate.href')"
@@ -109,7 +106,6 @@ export default {
             href="https://bsky.app/profile/pierrelemee.fr"
             target="_blank"
             :title="$t('header.social.bluesky')"
-
           >
             <BlueskyLogo />
           </a>
@@ -243,44 +239,63 @@ export default {
             <div class="job-description">
               <div v-if="locale == 'fr'">
                 <p>
-                  Ces dernières années, j'ai la chance d'exercer en tant qu'indépendant des rôles de développeur fullstack sénior :
-                  <ul>
-                    <li>
-                      <a href="https://beta.gouv.fr/startups/precontentieux.justice.html">Mon Indemnisation Justice</a>: startup d'état, via le programme <a href="https://beta.gouv.fr">Beta.gouv</a>, du Ministère de la Justice pour laquelle je construis l'application dans son ensemble.
-                    </li>
-                    <li>
-                      <a href="https://akeneo.com/">Akeneo</a>: j'ai mis en place des APIs internes pour servir des modèles d'IA générés par les ingénieurs ML en interne.
-                    </li>
-                    <li>
-                      <a href="https://underdog.shop/">Underdog</a>: j'ai eu la chance de contribuer à la mise en place des premiers outils de la plateforme de gestion et vende des produits reconditionnés.
-                    </li>
-                    <li>
-                      <a href="https://beta.gouv.fr/startups/apilos.html">APiLos</a>: startup d'état, via le programme <a href="https://beta.gouv.fr">Beta.gouv</a>, qui vise à numériser le conventionnement du logement social. J'ai contribué à la mise en ligne en faisant converger les donées de la base historique
-                    </li>
-                  </ul>
-
+                  Ces dernières années, j'ai la chance d'exercer en tant qu'indépendant des rôles de
+                  développeur fullstack sénior :
                 </p>
+                <ul>
+                  <li>
+                    <a href="https://beta.gouv.fr/startups/precontentieux.justice.html"
+                      >Mon Indemnisation Justice</a
+                    >: startup d'état, via le programme
+                    <a href="https://beta.gouv.fr">Beta.gouv</a>, du Ministère de la Justice pour
+                    laquelle je construis l'application dans son ensemble.
+                  </li>
+                  <li>
+                    <a href="https://akeneo.com/">Akeneo</a>: j'ai mis en place des APIs internes
+                    pour servir des modèles d'IA générés par les ingénieurs ML en interne.
+                  </li>
+                  <li>
+                    <a href="https://underdog.shop/">Underdog</a>: j'ai eu la chance de contribuer à
+                    la mise en place des premiers outils de la plateforme de gestion et vende des
+                    produits reconditionnés.
+                  </li>
+                  <li>
+                    <a href="https://beta.gouv.fr/startups/apilos.html">APiLos</a>: startup d'état,
+                    via le programme <a href="https://beta.gouv.fr">Beta.gouv</a>, qui vise à
+                    numériser le conventionnement du logement social. J'ai contribué à la mise en
+                    ligne en faisant converger les donées de la base historique
+                  </li>
+                </ul>
               </div>
 
               <div v-else>
                 <p>
-                  Over the last years, I had the chance to practice, as a freelancer, senior fullstack developer roles :
-                  <ul>
-                    <li>
-                      <a href="https://beta.gouv.fr/startups/precontentieux.justice.html">Mon Indemnisation Justice</a>: french State startup, through the <a href="https://beta.gouv.fr">Beta.gouv</a> program, of the <i>Ministère de la Justice</i> of which I'm building the entire application.
-                    </li>
-                    <li>
-                      <a href="https://akeneo.com/">Akeneo</a>: I setup internal web APIs to serve AI models designed by ML engineers.
-                    </li>
-                    <li>
-                      <a href="https://underdog.shop/">Underdog</a>: I had the chance to contribute to the setup of first software tools to manage and sell reconditioned products.
-                    </li>
-                    <li>
-                      <a href="https://beta.gouv.fr/startups/apilos.html">APiLos</a>: french State startup, through the <a href="https://beta.gouv.fr">Beta.gouv</a> program, that aims to digitalise social housing conventions. I ran the old data ingestion from the former database to help put the application to production.
-                    </li>
-                  </ul>
-
+                  Over the last years, I had the chance to practice, as a freelancer, senior
+                  fullstack developer roles :
                 </p>
+                <ul>
+                  <li>
+                    <a href="https://beta.gouv.fr/startups/precontentieux.justice.html"
+                      >Mon Indemnisation Justice</a
+                    >: french State startup, through the
+                    <a href="https://beta.gouv.fr">Beta.gouv</a> program, of the
+                    <i>Ministère de la Justice</i> of which I'm building the entire application.
+                  </li>
+                  <li>
+                    <a href="https://akeneo.com/">Akeneo</a>: I setup internal web APIs to serve AI
+                    models designed by ML engineers.
+                  </li>
+                  <li>
+                    <a href="https://underdog.shop/">Underdog</a>: I had the chance to contribute to
+                    the setup of first software tools to manage and sell reconditioned products.
+                  </li>
+                  <li>
+                    <a href="https://beta.gouv.fr/startups/apilos.html">APiLos</a>: french State
+                    startup, through the <a href="https://beta.gouv.fr">Beta.gouv</a> program, that
+                    aims to digitalise social housing conventions. I ran the old data ingestion from
+                    the former database to help put the application to production.
+                  </li>
+                </ul>
               </div>
 
               <div class="skill-badges skill-badges-mini">

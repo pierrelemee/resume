@@ -11,17 +11,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     minify: true,
-    cssMinify: true,
+    cssMinify: true
   },
   publicDir: 'public',
-  plugins: [
-    vue(),
-    vueJsx(),
-    svgLoader(),
-  ],
+  plugins: [vue(), vueJsx(), svgLoader()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    allowedHosts: ['127.0.0.1', 'localhost', 'dev.pierrelemee.fr']
   }
 })
