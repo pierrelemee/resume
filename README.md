@@ -28,5 +28,5 @@ Build and push Docker image:
 
 ```bash
 echo $GH_PAT | docker login ghcr.io -u pierrelemee --password-stdin
-docker buildx build --no-cache . -f .docker/Dockerfile -t ghcr.io/pierrelemee/resume --push
+docker buildx build --no-cache --platform linux/amd64,linux/arm64 . -f .docker/Dockerfile -t ghcr.io/pierrelemee/resume --push
 ```

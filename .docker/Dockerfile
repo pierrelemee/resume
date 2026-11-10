@@ -20,9 +20,11 @@ WORKDIR /tmp/build
 #RUN --mount=type=cache,target=/root/.yarn YARN_CACHE_FOLDER=/root/.yarn yarn install --prod --frozen-lockfile
 RUN yarn install --prod --frozen-lockfile
 
-COPY --parents index.html Caddyfile vite.config.js src public tools /tmp/build/
+COPY --parents index.html vite.config.js src public tools /tmp/build/
 
 RUN yarn build --outDir /app
+
+COPY Caddyfile /etc/caddy/Caddyfile
 
 WORKDIR /app
 
@@ -30,4 +32,4 @@ RUN rm -Rf /tmp/build
 
 EXPOSE 3000
 
-CMD ["caddy", "start", "-c", "/app/Caddyfile"]
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile"]
