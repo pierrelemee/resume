@@ -1,4 +1,9 @@
-localhost:3000 {
+{
+	auto_https off
+	admin off
+}
+
+http://:3000 {
 	root * /app
 	encode
 	try_files {path} /index.html
